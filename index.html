@@ -1,9 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SSSkeratin — запись</title>
+<title>SSSkeratin — Запись</title>
 
 <style>
 * {
@@ -12,118 +12,103 @@
 
 body {
   margin: 0;
-  background: #f7f2ee;
-  color: #292421;
-  font-family: Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f8f6f4;
+  color: #292522;
 }
 
 .container {
-  width: 92%;
-  max-width: 650px;
+  max-width: 520px;
   margin: auto;
-}
-
-header {
-  text-align: center;
-  padding: 35px 0 10px;
+  padding: 28px 18px 50px;
 }
 
 .logo {
-  font-size: 25px;
-  font-weight: bold;
-  letter-spacing: 5px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-top: 20px;
 }
 
 .subtitle {
-  margin-top: 8px;
-  color: #81766e;
-  font-size: 13px;
-}
-
-.hero {
   text-align: center;
-  padding: 55px 0 25px;
-}
-
-.hero h1 {
-  font-family: Georgia, serif;
-  font-weight: normal;
-  font-size: 42px;
-  margin: 0 0 15px;
-}
-
-.hero p {
-  color: #81766e;
-  line-height: 1.6;
-}
-
-.buttons {
-  margin-top: 25px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 14px 21px;
-  margin: 5px;
-  border-radius: 30px;
-  border: 1px solid #292421;
-  text-decoration: none;
-  color: #292421;
-  font-size: 14px;
-}
-
-.btn.main {
-  background: #292421;
-  color: white;
+  color: #777;
+  margin: 8px 0 30px;
 }
 
 .card {
-  background: #fffdfb;
-  border: 1px solid #e5dbd3;
-  border-radius: 24px;
-  padding: 24px;
-  margin: 18px 0;
+  background: white;
+  border-radius: 22px;
+  padding: 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.04);
 }
 
 h2 {
-  font-family: Georgia, serif;
-  font-weight: normal;
-  font-size: 28px;
+  font-size: 19px;
   margin-top: 0;
 }
 
-.price {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  padding: 11px 0;
-  border-bottom: 1px solid #e5dbd3;
+label {
+  display: block;
   font-size: 14px;
+  margin: 17px 0 7px;
 }
 
-.price:last-child {
-  border-bottom: none;
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #dedad6;
+  border-radius: 12px;
+  background: #fff;
+  font-size: 15px;
+  font-family: inherit;
 }
 
-.price b {
-  white-space: nowrap;
+textarea {
+  min-height: 90px;
+  resize: vertical;
 }
 
-ul {
-  padding-left: 20px;
-  color: #81766e;
-  line-height: 1.7;
+button {
+  width: 100%;
+  border: 0;
+  border-radius: 14px;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.center {
+.main-button {
+  background: #292522;
+  color: white;
+  margin-top: 20px;
+}
+
+.telegram {
+  display: block;
   text-align: center;
+  color: #292522;
+  text-decoration: none;
+  margin-top: 15px;
 }
 
-footer {
+.success {
+  display: none;
   text-align: center;
-  color: #81766e;
+  padding: 25px 10px;
+}
+
+.success h2 {
+  margin-bottom: 12px;
+}
+
+.required {
+  color: #999;
   font-size: 12px;
-  padding: 20px 0 40px;
 }
 </style>
 </head>
@@ -132,250 +117,173 @@ footer {
 
 <div class="container">
 
-<header>
-  <div class="logo">SSSKERATIN</div>
-  <div class="subtitle">
-    Кератиновое выпрямление · реконструкция волос
+  <div class="logo">SSSkeratin</div>
+  <div class="subtitle">Запись на процедуру</div>
+
+  <form id="bookingForm">
+
+    <div class="card">
+      <h2>Запись</h2>
+
+      <label>Город</label>
+      <select id="city" required>
+        <option value="">Выберите город</option>
+        <option>Москва</option>
+        <option>Чаплыгин</option>
+      </select>
+
+      <label>Дата</label>
+      <input type="date" id="date" required>
+
+      <label>Время</label>
+      <input type="time" id="time" required>
+
+      <label>Процедура</label>
+      <select id="procedure" required>
+        <option value="">Выберите процедуру</option>
+        <option>KERATIN</option>
+        <option>NANOPLASTIKA</option>
+        <option>BOTOX IN HOT TECHNIQUE</option>
+        <option>SEALING ENDS</option>
+        <option>Не знаю, какую процедуру выбрать</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <h2>Контактные данные</h2>
+
+      <label>Имя</label>
+      <input type="text" id="name" placeholder="Ваше имя" required>
+
+      <label>Telegram username или номер телефона</label>
+      <input type="text" id="contact" placeholder="@username или +7..." required>
+    </div>
+
+    <div class="card">
+      <h2>О волосах</h2>
+
+      <label>Делали ли вы ранее горячие процедуры для волос?</label>
+      <select id="previousProcedure" required>
+        <option value="">Выберите вариант</option>
+        <option>Да</option>
+        <option>Нет</option>
+      </select>
+
+      <label>Если да, какие и когда?</label>
+      <input
+        type="text"
+        id="previousDetails"
+        placeholder="Например: кератин 6 месяцев назад"
+      >
+
+      <label>Что вас сейчас беспокоит в волосах?</label>
+      <textarea
+        id="concern"
+        placeholder="Что вам не нравится в состоянии волос?"
+      ></textarea>
+
+      <label>Какой результат вы хотели бы получить?</label>
+      <textarea
+        id="result"
+        placeholder="Какого результата вы хотите?"
+      ></textarea>
+
+      <label>Были ли аллергические реакции на составы для волос или косметические средства?</label>
+      <select id="allergy">
+        <option>Нет</option>
+        <option>Да</option>
+      </select>
+
+      <label>Фото волос</label>
+      <input type="file" id="photo" accept="image/*">
+      <div class="required">Фото поможет мне лучше подготовиться к процедуре.</div>
+    </div>
+
+    <button class="main-button" type="submit">
+      Отправить запись
+    </button>
+
+  </form>
+
+  <div class="success" id="success">
+    <h2>Спасибо, что выбрали SSSkeratin 🤍</h2>
+
+    <p>
+      Ваша запись отправлена на подтверждение.
+      В ближайшее время с вами свяжутся для уточнения всех деталей
+      и подтверждения записи.
+    </p>
+
+    <p>
+      Если у вас есть вопросы, которые хотелось бы уточнить заранее,
+      я буду рада ответить в Telegram:
+      <strong>@SSSkeratin</strong>
+    </p>
+
+    <a
+      class="telegram"
+      href="https://t.me/SSSkeratin"
+      target="_blank"
+    >
+      Написать мне
+    </a>
   </div>
-</header>
-
-<section class="hero">
-
-  <h1>Запись на процедуру</h1>
-
-  <p>
-    Выбери удобный способ связи и напиши мне для записи.
-  </p>
-
-  <div class="buttons">
-
-    <a class="btn main"
-       href="https://t.me/SSSkeratin"
-       target="_blank">
-       Записаться в Telegram
-    </a>
-
-    <a class="btn"
-       href="https://instagram.com/ssskeratin"
-       target="_blank">
-       Instagram
-    </a>
-
-    <a class="btn"
-       href="https://t.me/keratinirir"
-       target="_blank">
-       Мои работы
-    </a>
-
-  </div>
-
-</section>
-
-
-<section class="card">
-
-<h2>Процедуры и цены</h2>
-
-<div class="price">
-<span>KERATIN · 20 см</span>
-<b>3 000 ₽</b>
-</div>
-
-<div class="price">
-<span>KERATIN · 30 см</span>
-<b>4 000 ₽</b>
-</div>
-
-<div class="price">
-<span>KERATIN · 40 см</span>
-<b>5 000 ₽</b>
-</div>
-
-<div class="price">
-<span>KERATIN · 50 см</span>
-<b>6 000 ₽</b>
-</div>
-
-<div class="price">
-<span>KERATIN · 60 см</span>
-<b>7 000 ₽</b>
-</div>
-
-<div class="price">
-<span>KERATIN · 70 см</span>
-<b>8 000 ₽</b>
-</div>
-
-
-<br>
-
-
-<div class="price">
-<span>NANOPLASTIKA · 20 см</span>
-<b>3 000 ₽</b>
-</div>
-
-<div class="price">
-<span>NANOPLASTIKA · 30 см</span>
-<b>5 000 ₽</b>
-</div>
-
-<div class="price">
-<span>NANOPLASTIKA · 40 см</span>
-<b>6 000 ₽</b>
-</div>
-
-<div class="price">
-<span>NANOPLASTIKA · 50 см</span>
-<b>7 000 ₽</b>
-</div>
-
-<div class="price">
-<span>NANOPLASTIKA · 60 см</span>
-<b>8 000 ₽</b>
-</div>
-
-<div class="price">
-<span>NANOPLASTIKA · 70 см</span>
-<b>9 000 ₽</b>
-</div>
-
-
-<br>
-
-
-<div class="price">
-<span>BOTOX IN HOT TECHNIQUE · 20 см</span>
-<b>2 500 ₽</b>
-</div>
-
-<div class="price">
-<span>BOTOX IN HOT TECHNIQUE · 30 см</span>
-<b>3 500 ₽</b>
-</div>
-
-<div class="price">
-<span>BOTOX IN HOT TECHNIQUE · 40 см</span>
-<b>4 500 ₽</b>
-</div>
-
-<div class="price">
-<span>BOTOX IN HOT TECHNIQUE · 50 см</span>
-<b>5 500 ₽</b>
-</div>
-
-<div class="price">
-<span>BOTOX IN HOT TECHNIQUE · 60 см</span>
-<b>6 500 ₽</b>
-</div>
-
-<div class="price">
-<span>BOTOX IN HOT TECHNIQUE · 70 см</span>
-<b>7 000 ₽</b>
-</div>
-
-</section>
-
-
-<section class="card">
-
-<h2>Важно</h2>
-
-<ul>
-
-<li>
-Волосы длиннее 70 см — стоимость рассчитывается индивидуально.
-</li>
-
-<li>
-При густоте волос более 8 см — доплата 1 000–2 500 ₽.
-</li>
-
-<li>
-Скидка на первое посещение — 15%.
-</li>
-
-<li>
-После отметки в Stories — 10% скидка на следующее посещение.
-</li>
-
-</ul>
-
-</section>
-
-
-<section class="card">
-
-<h2>Как записаться</h2>
-
-<ul>
-
-<li>Напиши мне в Telegram.</li>
-
-<li>Укажи желаемую процедуру.</li>
-
-<li>Напиши длину волос.</li>
-
-<li>Укажи желаемые дату и время.</li>
-
-<li>Я подтвержу свободное окошко.</li>
-
-</ul>
-
-<div class="center">
-
-<a class="btn main"
-   href="https://t.me/SSSkeratin"
-   target="_blank">
-   Записаться
-</a>
 
 </div>
 
-</section>
+<script>
+const WORKER_URL =
+  "https://sss-keratin-api.noname538i2007.workers.dev/";
 
+const form = document.getElementById("bookingForm");
+const success = document.getElementById("success");
 
-<section class="card center">
+form.addEventListener("submit", async function(event) {
+  event.preventDefault();
 
-<h2>Мои работы</h2>
+  const button = form.querySelector("button");
+  button.disabled = true;
+  button.textContent = "Отправляем...";
 
-<p>
-Посмотреть результаты процедур можно здесь:
-</p>
+  const data = {
+    city: document.getElementById("city").value,
+    date: document.getElementById("date").value,
+    time: document.getElementById("time").value,
+    procedure: document.getElementById("procedure").value,
+    name: document.getElementById("name").value,
+    contact: document.getElementById("contact").value,
+    previousProcedure: document.getElementById("previousProcedure").value,
+    previousDetails: document.getElementById("previousDetails").value,
+    concern: document.getElementById("concern").value,
+    result: document.getElementById("result").value,
+    allergy: document.getElementById("allergy").value
+  };
 
-<a class="btn"
-   href="https://instagram.com/ssskeratin"
-   target="_blank">
-   Instagram · @ssskeratin
-</a>
+  try {
+    const response = await fetch(WORKER_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
 
-<a class="btn"
-   href="https://t.me/keratinirir"
-   target="_blank">
-   Telegram · работы
-</a>
+    const result = await response.json();
 
-</section>
+    if (!result.ok) {
+      throw new Error("Ошибка отправки");
+    }
 
+    form.style.display = "none";
+    success.style.display = "block";
 
-<section class="card center">
-
-<h2>Связь</h2>
-
-<a class="btn main"
-   href="https://t.me/SSSkeratin"
-   target="_blank">
-   Telegram · запись
-</a>
-
-</section>
-
-
-<footer>
-SSSkeratin · запись на процедуры
-</footer>
-
-</div>
+  } catch (error) {
+    alert("Не удалось отправить запись. Попробуйте ещё раз.");
+    button.disabled = false;
+    button.textContent = "Отправить запись";
+  }
+});
+</script>
 
 </body>
 </html>
