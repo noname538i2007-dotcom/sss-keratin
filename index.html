@@ -11,323 +11,301 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-* {
-  box-sizing: border-box;
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+color:#292522;
+font-family:'Montserrat',sans-serif;
+background:
+radial-gradient(ellipse at 15% 10%,rgba(255,255,255,.95) 0%,transparent 38%),
+radial-gradient(ellipse at 85% 30%,rgba(211,193,174,.38) 0%,transparent 40%),
+radial-gradient(ellipse at 30% 80%,rgba(190,165,143,.25) 0%,transparent 42%),
+linear-gradient(135deg,#eee7df,#f8f5f1 45%,#e7ddd4);
 }
 
-html {
-  scroll-behavior: smooth;
+body::before{
+content:"";
+position:fixed;
+inset:0;
+pointer-events:none;
+opacity:.22;
+background:repeating-linear-gradient(
+102deg,
+transparent 0px,
+transparent 8px,
+rgba(120,90,65,.07) 9px,
+transparent 11px
+);
+z-index:-1;
 }
 
-body {
-  margin: 0;
-  color: #292522;
-  font-family: 'Montserrat', sans-serif;
-
-  background:
-    radial-gradient(ellipse at 15% 10%, rgba(255,255,255,.95) 0%, transparent 38%),
-    radial-gradient(ellipse at 85% 30%, rgba(211,193,174,.38) 0%, transparent 40%),
-    radial-gradient(ellipse at 30% 80%, rgba(190,165,143,.25) 0%, transparent 42%),
-    linear-gradient(135deg, #eee7df, #f8f5f1 45%, #e7ddd4);
+.container{
+max-width:650px;
+margin:auto;
+padding:20px 16px 65px;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  opacity: .22;
-
-  background:
-    repeating-linear-gradient(
-      102deg,
-      transparent 0px,
-      transparent 8px,
-      rgba(120,90,65,.07) 9px,
-      transparent 11px
-    );
-
-  z-index: -1;
+.hero{
+text-align:center;
+padding:65px 15px 45px;
 }
 
-.container {
-  max-width: 650px;
-  margin: auto;
-  padding: 20px 16px 65px;
+.logo{
+font-family:'Cormorant Garamond',serif;
+font-size:58px;
+font-weight:500;
+letter-spacing:5px;
+line-height:1;
 }
 
-.hero {
-  text-align: center;
-  padding: 65px 15px 45px;
+.hero-subtitle{
+margin-top:14px;
+font-size:12px;
+letter-spacing:3px;
+text-transform:uppercase;
+color:#817267;
 }
 
-.logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 58px;
-  font-weight: 500;
-  letter-spacing: 5px;
-  line-height: 1;
+.hero p{
+margin:22px auto 0;
+max-width:500px;
+line-height:1.75;
+font-size:14px;
+color:#70665e;
 }
 
-.hero-subtitle {
-  margin-top: 14px;
-  font-size: 12px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #817267;
+.card{
+background:rgba(255,255,255,.72);
+backdrop-filter:blur(16px);
+-webkit-backdrop-filter:blur(16px);
+border:1px solid rgba(255,255,255,.8);
+border-radius:26px;
+padding:25px;
+margin-bottom:18px;
+box-shadow:
+0 15px 45px rgba(83,63,47,.08),
+inset 0 1px 0 rgba(255,255,255,.9);
 }
 
-.hero p {
-  margin: 22px auto 0;
-  max-width: 500px;
-  line-height: 1.75;
-  font-size: 14px;
-  color: #70665e;
+h2{
+margin:0 0 18px;
+font-family:'Cormorant Garamond',serif;
+font-size:29px;
+font-weight:500;
 }
 
-.card {
-  background: rgba(255,255,255,.72);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-
-  border: 1px solid rgba(255,255,255,.8);
-  border-radius: 26px;
-
-  padding: 25px;
-  margin-bottom: 18px;
-
-  box-shadow:
-    0 15px 45px rgba(83,63,47,.08),
-    inset 0 1px 0 rgba(255,255,255,.9);
+h3{
+margin:0 0 9px;
+font-family:'Cormorant Garamond',serif;
+font-size:22px;
+font-weight:600;
+letter-spacing:.5px;
 }
 
-h2 {
-  margin: 0 0 18px;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 29px;
-  font-weight: 500;
+p{line-height:1.65}
+
+.small{
+color:#756b63;
+font-size:13px;
+line-height:1.65;
 }
 
-h3 {
-  margin: 0 0 9px;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 22px;
-  font-weight: 600;
-  letter-spacing: .5px;
+.social{
+display:block;
+padding:17px 18px;
+margin-top:11px;
+border-radius:16px;
+background:rgba(244,239,234,.78);
+color:#292522;
+text-decoration:none;
+transition:.2s;
 }
 
-p {
-  line-height: 1.65;
+.social:hover{
+transform:translateY(-2px);
+background:rgba(235,226,218,.95);
 }
 
-.small {
-  color: #756b63;
-  font-size: 13px;
-  line-height: 1.65;
+.social strong{
+display:block;
+margin-bottom:5px;
+font-size:14px;
 }
 
-.social {
-  display: block;
-  padding: 17px 18px;
-  margin-top: 11px;
-
-  border-radius: 16px;
-  background: rgba(244,239,234,.78);
-
-  color: #292522;
-  text-decoration: none;
-
-  transition: .2s;
+.social span{
+font-size:12px;
+color:#857a71;
 }
 
-.social:hover {
-  transform: translateY(-2px);
-  background: rgba(235,226,218,.95);
+.city-buttons{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:11px;
 }
 
-.social strong {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 14px;
+button{
+width:100%;
+border:0;
+border-radius:15px;
+padding:15px;
+background:#302b27;
+color:white;
+font-family:'Montserrat',sans-serif;
+font-size:14px;
+cursor:pointer;
+transition:.2s;
 }
 
-.social span {
-  font-size: 12px;
-  color: #857a71;
+button:hover{transform:translateY(-1px)}
+
+.city-button{
+background:rgba(238,231,224,.9);
+color:#302b27;
+border:1px solid rgba(130,110,95,.12);
 }
 
-.city-buttons {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 11px;
+.city-button.active{
+background:#302b27;
+color:white;
 }
 
-button {
-  width: 100%;
-  border: 0;
-  border-radius: 15px;
-
-  padding: 15px;
-
-  background: #302b27;
-  color: white;
-
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  cursor: pointer;
-
-  transition: .2s;
+.procedure{
+padding:20px 0;
+border-bottom:1px solid rgba(120,100,85,.12);
 }
 
-button:hover {
-  transform: translateY(-1px);
+.procedure:last-child{border-bottom:0}
+
+.price-row{
+display:flex;
+justify-content:space-between;
+gap:20px;
+margin-top:9px;
+font-size:13px;
+color:#6e655e;
 }
 
-.city-button {
-  background: rgba(238,231,224,.9);
-  color: #302b27;
-  border: 1px solid rgba(130,110,95,.12);
+.price-row span:last-child{
+color:#292522;
+font-weight:600;
+white-space:nowrap;
 }
 
-.city-button.active {
-  background: #302b27;
-  color: white;
+.ends{
+margin-top:20px;
+padding:19px;
+border-radius:17px;
+background:rgba(239,232,225,.82);
 }
 
-.procedure {
-  padding: 20px 0;
-  border-bottom: 1px solid rgba(120,100,85,.12);
+.notice{
+padding:17px;
+margin-top:17px;
+border-radius:17px;
+background:rgba(245,240,235,.82);
+font-size:13px;
+line-height:1.7;
+color:#675e57;
 }
 
-.procedure:last-child {
-  border-bottom: 0;
+.notice div{margin:4px 0}
+
+label{
+display:block;
+margin-top:16px;
+font-size:12px;
+color:#766c64;
 }
 
-.price-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-
-  margin-top: 9px;
-
-  font-size: 13px;
-  color: #6e655e;
+input,select,textarea{
+width:100%;
+padding:14px 15px;
+margin-top:7px;
+border:1px solid rgba(125,105,90,.18);
+border-radius:14px;
+background:rgba(255,255,255,.8);
+color:#292522;
+font-family:'Montserrat',sans-serif;
+font-size:14px;
+outline:none;
 }
 
-.price-row span:last-child {
-  color: #292522;
-  font-weight: 600;
-  white-space: nowrap;
+textarea{
+min-height:95px;
+resize:vertical;
 }
 
-.ends {
-  margin-top: 20px;
-  padding: 19px;
-
-  border-radius: 17px;
-  background: rgba(239,232,225,.82);
+input:focus,select:focus,textarea:focus{
+border-color:rgba(100,80,65,.4);
 }
 
-.ends strong {
-  font-size: 15px;
+.hidden{display:none}
+
+.slot-date{
+margin-top:22px;
+padding-bottom:9px;
+border-bottom:1px solid rgba(120,100,85,.15);
+font-family:'Cormorant Garamond',serif;
+font-size:22px;
+font-weight:600;
 }
 
-.notice {
-  padding: 17px;
-  margin-top: 17px;
-
-  border-radius: 17px;
-
-  background: rgba(245,240,235,.82);
-
-  font-size: 13px;
-  line-height: 1.7;
-  color: #675e57;
+.slot{
+padding:15px 16px;
+margin-top:9px;
+border:1px solid rgba(120,100,85,.18);
+border-radius:14px;
+background:rgba(255,255,255,.65);
+cursor:pointer;
+font-size:14px;
+transition:.2s;
 }
 
-.notice div {
-  margin: 4px 0;
+.slot:hover{
+background:rgba(239,231,224,.9);
+transform:translateY(-1px);
 }
 
-input,
-select,
-textarea {
-  width: 100%;
-
-  padding: 14px 15px;
-  margin-top: 7px;
-
-  border: 1px solid rgba(125,105,90,.18);
-  border-radius: 14px;
-
-  background: rgba(255,255,255,.8);
-
-  color: #292522;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-
-  outline: none;
+.slot.active{
+background:#302b27;
+color:white;
+border-color:#302b27;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-  border-color: rgba(100,80,65,.4);
+.selected-info{
+margin-top:15px;
+padding:14px;
+border-radius:14px;
+background:rgba(239,232,225,.82);
+font-size:13px;
 }
 
-textarea {
-  min-height: 95px;
-  resize: vertical;
+.main-button{margin-top:18px}
+
+.terms{
+margin-top:18px;
+padding:18px;
+border-radius:17px;
+background:rgba(239,232,225,.82);
+font-size:12px;
+line-height:1.7;
+color:#675e57;
 }
 
-label {
-  display: block;
-  margin-top: 16px;
-
-  font-size: 12px;
-  color: #766c64;
+.terms strong{
+color:#292522;
 }
 
-.slot {
-  padding: 15px 16px;
-  margin-top: 9px;
-
-  border: 1px solid rgba(120,100,85,.18);
-  border-radius: 14px;
-
-  background: rgba(255,255,255,.65);
-
-  cursor: pointer;
-  font-size: 14px;
-
-  transition: .2s;
-}
-
-.slot:hover {
-  background: rgba(239,231,224,.9);
-}
-
-.slot.active {
-  background: #302b27;
-  color: white;
-  border-color: #302b27;
-}
-
-.main-button {
-  margin-top: 18px;
-}
-
-.hidden {
-  display: none;
-}
-
-.footer {
-  text-align: center;
-  color: #8c8178;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px;
-  letter-spacing: 2px;
-  padding: 25px;
+.footer{
+text-align:center;
+color:#8c8178;
+font-family:'Cormorant Garamond',serif;
+font-size:18px;
+letter-spacing:2px;
+padding:25px;
 }
 </style>
 </head>
@@ -422,7 +400,6 @@ onclick="chooseCity('Чаплыгин')">
 
 <h2>Процедуры</h2>
 
-
 <div class="procedure">
 
 <h3>KERATIN</h3>
@@ -435,7 +412,6 @@ onclick="chooseCity('Чаплыгин')">
 <div class="price-row"><span>70 см</span><span>8 000 ₽</span></div>
 
 </div>
-
 
 <div class="procedure">
 
@@ -450,7 +426,6 @@ onclick="chooseCity('Чаплыгин')">
 
 </div>
 
-
 <div class="procedure">
 
 <h3>BOTOX IN HOT TECHNIQUE</h3>
@@ -464,7 +439,6 @@ onclick="chooseCity('Чаплыгин')">
 
 </div>
 
-
 <div class="ends">
 
 <h3>SEALING ENDS</h3>
@@ -473,12 +447,10 @@ onclick="chooseCity('Чаплыгин')">
 
 <p class="small">
 Запечатывание кончиков — дополнительная процедура для ухода
-за самой уязвимой частью волос. Её можно совмещать
-с любой основной процедурой для более сильной защиты кончиков.
+за самой уязвимой частью волос.
 </p>
 
 </div>
-
 
 <div class="notice">
 
@@ -500,13 +472,6 @@ onclick="chooseCity('Чаплыгин')">
 Сначала выберите город.
 </div>
 
-<label>Дата</label>
-
-<input
-type="date"
-id="date"
-onchange="loadSlots()">
-
 <div id="slots"></div>
 
 </section>
@@ -516,11 +481,13 @@ onchange="loadSlots()">
 
 <h2>Запись</h2>
 
+<div class="selected-info" id="selectedInfo"></div>
+
 <label>Имя</label>
-<input id="name">
+<input id="name" placeholder="Ваше имя">
 
 <label>Telegram или номер телефона</label>
-<input id="contact">
+<input id="contact" placeholder="@username или номер телефона">
 
 <label>Процедура</label>
 
@@ -544,10 +511,44 @@ id="comment"
 placeholder="Расскажите о волосах или задайте вопрос">
 </textarea>
 
-<div class="notice">
-В течение рабочего времени вам поступит сообщение
-с реквизитами для внесения предоплаты.
+
+<div class="terms">
+
+<strong>Условия предоплаты</strong>
+
+<br><br>
+
+Предоплата входит в стоимость процедуры.
+
+<br><br>
+
+<strong>Москва:</strong>
+при отмене записи более чем за 72 часа до процедуры
+предоплата возвращается.
+При отмене за 72 часа или менее предоплата не возвращается.
+
+<br><br>
+
+<strong>Чаплыгин:</strong>
+условия возврата действуют в соответствии с установленным
+сроком отмены записи.
+
+<br><br>
+
+Если отмена связана с серьёзными непредвиденными обстоятельствами —
+например, внезапным заболеванием, травмой, ДТП, госпитализацией,
+смертью или тяжёлым состоянием близкого человека либо другой
+чрезвычайной ситуацией — необходимо указать причину в личном чате
+и предоставить подтверждение ситуации: документы, фотографии,
+видео или другие материалы.
+
+<br><br>
+
+Возврат в таких случаях рассматривается
+<strong>после проверки предоставленной информации.</strong>
+
 </div>
+
 
 <button
 class="main-button"
@@ -564,16 +565,15 @@ onclick="sendBooking()">
 
 <p>
 В течение рабочего времени вам поступит сообщение
-с реквизитами для перевода предоплаты.
+с информацией о предоплате.
 </p>
 
 <p>
-После оплаты вам поступит ссылка на вашу запись
-с городом, датой, временем, выбранной процедурой
-и адресом.
+После внесения предоплаты вы получите ссылку
+со всей подробной информацией о вашей записи.
 </p>
 
-<div class="notice" id="paymentInfo"></div>
+<div class="notice" id="bookingLink"></div>
 
 </section>
 
@@ -592,86 +592,173 @@ const API =
 
 let city = "";
 let selectedSlot = "";
+let selectedDate = "";
 
-function chooseCity(value) {
+
+/* =========================
+   ГОРОД
+========================= */
+
+function chooseCity(value){
 
 city = value;
+selectedSlot = "";
+selectedDate = "";
 
-document.getElementById("moscow")
+document
+.getElementById("moscow")
 .classList.remove("active");
 
-document.getElementById("chaplygin")
+document
+.getElementById("chaplygin")
 .classList.remove("active");
 
-if (value === "Москва") {
-document.getElementById("moscow")
+if(value === "Москва"){
+document
+.getElementById("moscow")
 .classList.add("active");
 }
 
-if (value === "Чаплыгин") {
-document.getElementById("chaplygin")
+if(value === "Чаплыгин"){
+document
+.getElementById("chaplygin")
 .classList.add("active");
 }
 
-document.getElementById("selectedCity")
+document
+.getElementById("selectedCity")
 .innerText =
-"Выбран город: " + value;
+"Свободные окошки — " + value;
 
-loadSlots();
+document
+.getElementById("formCard")
+.classList.add("hidden");
+
+loadAllSlots();
 
 }
 
-async function loadSlots() {
 
-const date =
-document.getElementById("date").value;
+/* =========================
+   НОРМАЛИЗАЦИЯ ГОРОДА
+========================= */
 
-const slots =
+function normalizeCity(value){
+
+if(
+value === "Москва" ||
+value.includes("РњРѕСЃРєРІР°")
+){
+return "Москва";
+}
+
+if(
+value === "Чаплыгин" ||
+value.includes("Р§Р°РїР»С‹РіРёРЅ")
+){
+return "Чаплыгин";
+}
+
+return value;
+}
+
+
+/* =========================
+   ВСЕ ОКОШКИ
+========================= */
+
+async function loadAllSlots(){
+
+const container =
 document.getElementById("slots");
 
-if (!city || !date) {
-slots.innerHTML = "";
-return;
-}
-
-slots.innerHTML =
+container.innerHTML =
 '<div class="small">Загружаем свободные окошки...</div>';
 
-try {
+try{
 
 const response =
-await fetch(
-API +
-"/slots?city=" +
-encodeURIComponent(city) +
-"&date=" +
-encodeURIComponent(date)
-);
+await fetch(API + "/all-slots");
 
 const data =
 await response.json();
 
-slots.innerHTML = "";
+container.innerHTML = "";
 
-if (!data.slots || data.slots.length === 0) {
+const citySlots =
+(data.slots || [])
+.filter(item =>
+normalizeCity(item.city) === city
+)
+.sort((a,b)=>
+a.date.localeCompare(b.date)
+);
 
-slots.innerHTML =
-'<div class="notice">На выбранную дату свободных окошек нет.</div>';
+if(citySlots.length === 0){
+
+container.innerHTML =
+'<div class="notice">Свободных окошек пока нет.</div>';
 
 return;
 
 }
 
-data.slots.forEach(item => {
+citySlots.forEach(day => {
 
-const div =
+const dateTitle =
 document.createElement("div");
 
-div.className = "slot";
+dateTitle.className =
+"slot-date";
 
-div.innerText = item.time;
+dateTitle.innerText =
+formatDate(day.date);
 
-div.onclick = () => {
+container.appendChild(dateTitle);
+
+
+day.slots
+.sort((a,b)=>
+a.time.localeCompare(b.time)
+)
+.forEach(item => {
+
+const slot =
+document.createElement("div");
+
+slot.className = "slot";
+
+slot.innerText =
+item.time;
+
+slot.onclick = () =>
+selectSlot(
+day.date,
+item.time,
+slot
+);
+
+container.appendChild(slot);
+
+});
+
+});
+
+}catch(error){
+
+container.innerHTML =
+'<div class="notice">Не удалось загрузить свободные окошки.</div>';
+
+}
+
+}
+
+
+/* =========================
+   ВЫБОР ОКОШКА
+========================= */
+
+function selectSlot(date,time,element){
 
 document
 .querySelectorAll(".slot")
@@ -679,65 +766,75 @@ document
 x.classList.remove("active")
 );
 
-div.classList.add("active");
+element.classList.add("active");
 
-selectedSlot = item.time;
+selectedDate = date;
+selectedSlot = time;
 
 document
 .getElementById("formCard")
 .classList.remove("hidden");
 
-};
+document
+.getElementById("selectedInfo")
+.innerText =
+city +
+" · " +
+formatDate(date) +
+" · " +
+time;
 
-slots.appendChild(div);
-
+document
+.getElementById("formCard")
+.scrollIntoView({
+behavior:"smooth",
+block:"center"
 });
 
-} catch(error) {
-
-slots.innerHTML =
-'<div class="notice">Не удалось загрузить свободные окошки.</div>';
-
 }
 
-}
 
-async function sendBooking() {
+/* =========================
+   ОТПРАВКА ЗАПИСИ
+========================= */
+
+async function sendBooking(){
 
 const name =
-document.getElementById("name").value;
+document.getElementById("name").value.trim();
 
 const contact =
-document.getElementById("contact").value;
+document.getElementById("contact").value.trim();
 
 const procedure =
 document.getElementById("procedureSelect").value;
 
 const comment =
-document.getElementById("comment").value;
+document.getElementById("comment").value.trim();
 
-const date =
-document.getElementById("date").value;
 
-if (
+if(
 !city ||
-!date ||
+!selectedDate ||
 !selectedSlot ||
 !name ||
 !contact ||
 !procedure
-) {
+){
 
-alert("Заполните все обязательные поля.");
+alert(
+"Заполните все обязательные поля."
+);
 
 return;
 
 }
 
+
 const body = {
 
 city: city,
-date: date,
+date: selectedDate,
 time: selectedSlot,
 name: name,
 contact: contact,
@@ -746,32 +843,37 @@ comment: comment
 
 };
 
-try {
+
+try{
 
 const response =
 await fetch(
 API + "/book",
 {
-method: "POST",
-headers: {
-"Content-Type": "application/json"
+method:"POST",
+headers:{
+"Content-Type":
+"application/json"
 },
-body: JSON.stringify(body)
+body:JSON.stringify(body)
 }
 );
 
 const result =
 await response.json();
 
-if (!result.ok) {
+
+if(!result.ok){
 
 alert(
-"Не удалось отправить запись. Возможно, это время уже занято."
+result.error ||
+"Не удалось отправить запись."
 );
 
 return;
 
 }
+
 
 document
 .getElementById("formCard")
@@ -781,25 +883,57 @@ document
 .getElementById("sentCard")
 .classList.remove("hidden");
 
-const amount =
-city === "Москва"
-? "1 000 ₽"
-: "500 ₽";
+
+const link =
+result.bookingUrl ||
+(API + "/booking/" + result.bookingId);
+
 
 document
-.getElementById("paymentInfo")
-.innerText =
-"Предоплата — " +
-amount +
-". Она входит в стоимость процедуры. После процедуры оплачивается только оставшаяся сумма.";
+.getElementById("bookingLink")
+.innerHTML =
 
-} catch(error) {
+"Ваша заявка отправлена мастеру 🤍<br><br>" +
+
+"После подтверждения и внесения предоплаты " +
+"вы получите персональную ссылку с полной информацией о записи.";
+
+
+document
+.getElementById("sentCard")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+
+}catch(error){
 
 alert(
 "Не удалось отправить запись. Попробуйте ещё раз."
 );
 
 }
+
+}
+
+
+/* =========================
+   ДАТА
+========================= */
+
+function formatDate(date){
+
+const d =
+new Date(date + "T12:00:00");
+
+return d.toLocaleDateString(
+"ru-RU",
+{
+day:"numeric",
+month:"long",
+year:"numeric"
+}
+);
 
 }
 
