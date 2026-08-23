@@ -11,77 +11,235 @@
 
 <style>
 *{box-sizing:border-box}
+
 body{
-margin:0;color:#292522;font-family:Montserrat,sans-serif;
+margin:0;
+color:#292522;
+font-family:'Montserrat',sans-serif;
 background:
 radial-gradient(ellipse at 15% 10%,rgba(255,255,255,.95),transparent 38%),
 radial-gradient(ellipse at 85% 30%,rgba(211,193,174,.38),transparent 40%),
 linear-gradient(135deg,#eee7df,#f8f5f1 45%,#e7ddd4);
 }
-.container{max-width:650px;margin:auto;padding:20px 16px 65px}
-.hero{text-align:center;padding:65px 15px 45px}
-.logo{font-family:"Cormorant Garamond",serif;font-size:58px;letter-spacing:5px}
-.hero-subtitle{margin-top:14px;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#817267}
-.hero p{margin:22px auto 0;max-width:500px;line-height:1.75;font-size:14px;color:#70665e}
+
+.container{
+max-width:650px;
+margin:auto;
+padding:20px 16px 65px
+}
+
+.hero{
+text-align:center;
+padding:65px 15px 45px
+}
+
+.logo{
+font-family:'Cormorant Garamond',serif;
+font-size:58px;
+letter-spacing:5px
+}
+
+.hero-subtitle{
+margin-top:14px;
+font-size:12px;
+letter-spacing:3px;
+text-transform:uppercase;
+color:#817267
+}
+
+.hero p{
+margin:22px auto 0;
+max-width:500px;
+line-height:1.75;
+font-size:14px;
+color:#70665e
+}
+
 .card{
 background:rgba(255,255,255,.72);
 backdrop-filter:blur(16px);
 border:1px solid rgba(255,255,255,.8);
-border-radius:26px;padding:25px;margin-bottom:18px;
-box-shadow:0 15px 45px rgba(83,63,47,.08);
+border-radius:26px;
+padding:25px;
+margin-bottom:18px;
+box-shadow:0 15px 45px rgba(83,63,47,.08)
 }
-h2{margin:0 0 18px;font-family:"Cormorant Garamond",serif;font-size:29px;font-weight:500}
-h3{font-family:"Cormorant Garamond",serif;font-size:22px}
-.small{color:#756b63;font-size:13px;line-height:1.65}
+
+h2{
+margin:0 0 18px;
+font-family:'Cormorant Garamond',serif;
+font-size:29px;
+font-weight:500
+}
+
+h3{
+font-family:'Cormorant Garamond',serif;
+font-size:22px;
+font-weight:600
+}
+
+.small{
+color:#756b63;
+font-size:13px;
+line-height:1.65
+}
+
 .social{
-display:block;padding:17px 18px;margin-top:11px;border-radius:16px;
-background:rgba(244,239,234,.78);color:#292522;text-decoration:none
+display:block;
+padding:17px 18px;
+margin-top:11px;
+border-radius:16px;
+background:rgba(244,239,234,.78);
+color:#292522;
+text-decoration:none
 }
-.social strong{display:block;margin-bottom:5px;font-size:14px}
-.social span{font-size:12px;color:#857a71}
-.city-buttons{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+
+.social strong{
+display:block;
+margin-bottom:5px;
+font-size:14px
+}
+
+.social span{
+font-size:12px;
+color:#857a71
+}
+
+.city-buttons{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:11px
+}
+
 button{
-width:100%;border:0;border-radius:15px;padding:15px;
-background:#302b27;color:white;font-family:Montserrat,sans-serif;
-font-size:14px;cursor:pointer
+width:100%;
+border:0;
+border-radius:15px;
+padding:15px;
+background:#302b27;
+color:white;
+font-family:'Montserrat',sans-serif;
+font-size:14px;
+cursor:pointer
 }
-.city-button{background:rgba(238,231,224,.9);color:#302b27}
-.city-button.active{background:#302b27;color:white}
-.procedure{padding:20px 0;border-bottom:1px solid rgba(120,100,85,.12)}
-.price-row{display:flex;justify-content:space-between;margin-top:9px;font-size:13px;color:#6e655e}
-.price-row span:last-child{font-weight:600;color:#292522}
-.ends,.notice,.terms,.selected-info{
-margin-top:17px;padding:17px;border-radius:17px;
+
+.city-button{
+background:rgba(238,231,224,.9);
+color:#302b27
+}
+
+.city-button.active{
+background:#302b27;
+color:white
+}
+
+.procedure{
+padding:20px 0;
+border-bottom:1px solid rgba(120,100,85,.12)
+}
+
+.price-row{
+display:flex;
+justify-content:space-between;
+margin-top:9px;
+font-size:13px;
+color:#6e655e
+}
+
+.price-row span:last-child{
+font-weight:600;
+color:#292522
+}
+
+.ends,
+.notice,
+.terms,
+.selected-info{
+margin-top:17px;
+padding:17px;
+border-radius:17px;
 background:rgba(239,232,225,.82);
-font-size:13px;line-height:1.7;color:#675e57
+font-size:13px;
+line-height:1.7;
+color:#675e57
 }
-label{display:block;margin-top:16px;font-size:12px;color:#766c64}
-input,select,textarea{
-width:100%;padding:14px 15px;margin-top:7px;
-border:1px solid rgba(125,105,90,.18);border-radius:14px;
-background:rgba(255,255,255,.8);font-family:Montserrat,sans-serif;
-font-size:14px;color:#292522
+
+label{
+display:block;
+margin-top:16px;
+font-size:12px;
+color:#766c64
 }
-textarea{min-height:95px;resize:vertical}
+
+input,
+select,
+textarea{
+width:100%;
+padding:14px 15px;
+margin-top:7px;
+border:1px solid rgba(125,105,90,.18);
+border-radius:14px;
+background:rgba(255,255,255,.8);
+font-family:'Montserrat',sans-serif;
+font-size:14px;
+color:#292522
+}
+
+textarea{
+min-height:95px;
+resize:vertical
+}
+
 .slot-date{
-margin-top:22px;padding-bottom:9px;border-bottom:1px solid rgba(120,100,85,.15);
-font-family:"Cormorant Garamond",serif;font-size:22px;font-weight:600
+margin-top:22px;
+padding-bottom:9px;
+border-bottom:1px solid rgba(120,100,85,.15);
+font-family:'Cormorant Garamond',serif;
+font-size:22px;
+font-weight:600
 }
+
 .slot{
-padding:15px 16px;margin-top:9px;border:1px solid rgba(120,100,85,.18);
-border-radius:14px;background:rgba(255,255,255,.65);cursor:pointer
+padding:15px 16px;
+margin-top:9px;
+border:1px solid rgba(120,100,85,.18);
+border-radius:14px;
+background:rgba(255,255,255,.65);
+cursor:pointer
 }
-.slot.active{background:#302b27;color:white}
+
+.slot.active{
+background:#302b27;
+color:white
+}
+
 .photo-box{
-margin-top:15px;padding:18px;border-radius:17px;
+margin-top:15px;
+padding:18px;
+border-radius:17px;
 background:rgba(239,232,225,.82)
 }
+
 .photo-preview{
-display:none;width:100%;max-height:280px;object-fit:cover;
-border-radius:14px;margin-top:12px
+display:none;
+width:100%;
+max-height:280px;
+object-fit:cover;
+border-radius:14px;
+margin-top:12px
 }
-.hidden{display:none}
-.footer{text-align:center;color:#8c8178;font-family:"Cormorant Garamond",serif;font-size:18px;padding:25px}
+
+.hidden{
+display:none
+}
+
+.footer{
+text-align:center;
+color:#8c8178;
+font-family:'Cormorant Garamond',serif;
+font-size:18px;
+padding:25px
+}
 </style>
 </head>
 
@@ -90,17 +248,24 @@ border-radius:14px;margin-top:12px
 <div class="container">
 
 <section class="hero">
+
 <div class="logo">SSSkeratin</div>
-<div class="hero-subtitle">Hair • Beauty • Care</div>
+
+<div class="hero-subtitle">
+Hair • Beauty • Care
+</div>
+
 <p>
 Ира — специалист по волосам.<br>
 Индивидуально подбираю процедуру с учётом состояния,
 структуры и особенностей волос.
 </p>
+
 </section>
 
 
 <section class="card">
+
 <h2>Обо мне</h2>
 
 <p class="small">
@@ -108,91 +273,133 @@ border-radius:14px;margin-top:12px
 процедуру индивидуально.
 </p>
 
-<a class="social" href="https://instagram.com/ssskeratin" target="_blank">
+<a class="social"
+href="https://instagram.com/ssskeratin"
+target="_blank">
+
 <strong>Instagram · @ssskeratin</strong>
 <span>Мои работы и результаты процедур</span>
+
 </a>
 
-<a class="social" href="https://t.me/keratinirir" target="_blank">
+<a class="social"
+href="https://t.me/keratinirir"
+target="_blank">
+
 <strong>Telegram-канал · @keratinirir</strong>
 <span>Работы, информация и новости</span>
+
 </a>
 
-<a class="social" href="https://t.me/SSSkeratin" target="_blank">
+<a class="social"
+href="https://t.me/SSSkeratin"
+target="_blank">
+
 <strong>Telegram для записи · @SSSkeratin</strong>
 <span>Записаться или задать вопрос</span>
+
 </a>
+
 </section>
 
 
 <section class="card">
+
 <h2>Выберите место</h2>
 
 <div class="city-buttons">
 
-<button id="moscow"
+<button
+id="moscow"
 class="city-button"
 onclick="chooseCity('Москва')">
+
 Москва
+
 </button>
 
-<button id="chaplygin"
+<button
+id="chaplygin"
 class="city-button"
 onclick="chooseCity('Чаплыгин')">
+
 Чаплыгин
+
 </button>
 
 </div>
+
 </section>
 
 
 <section class="card">
+
 <h2>Процедуры</h2>
 
 <div class="procedure">
+
 <h3>KERATIN</h3>
+
 <div class="price-row"><span>20 см</span><span>3 000 ₽</span></div>
 <div class="price-row"><span>30 см</span><span>4 000 ₽</span></div>
 <div class="price-row"><span>40 см</span><span>5 000 ₽</span></div>
 <div class="price-row"><span>50 см</span><span>6 000 ₽</span></div>
 <div class="price-row"><span>60 см</span><span>7 000 ₽</span></div>
 <div class="price-row"><span>70 см</span><span>8 000 ₽</span></div>
+
 </div>
 
+
 <div class="procedure">
+
 <h3>NANOPLASTIKA</h3>
+
 <div class="price-row"><span>20 см</span><span>3 000 ₽</span></div>
 <div class="price-row"><span>30 см</span><span>5 000 ₽</span></div>
 <div class="price-row"><span>40 см</span><span>6 000 ₽</span></div>
 <div class="price-row"><span>50 см</span><span>7 000 ₽</span></div>
 <div class="price-row"><span>60 см</span><span>8 000 ₽</span></div>
 <div class="price-row"><span>70 см</span><span>9 000 ₽</span></div>
+
 </div>
 
+
 <div class="procedure">
+
 <h3>BOTOX IN HOT TECHNIQUE</h3>
+
 <div class="price-row"><span>20 см</span><span>2 500 ₽</span></div>
 <div class="price-row"><span>30 см</span><span>3 500 ₽</span></div>
 <div class="price-row"><span>40 см</span><span>4 500 ₽</span></div>
 <div class="price-row"><span>50 см</span><span>5 500 ₽</span></div>
 <div class="price-row"><span>60 см</span><span>6 500 ₽</span></div>
 <div class="price-row"><span>70 см</span><span>7 000 ₽</span></div>
+
 </div>
 
+
 <div class="ends">
+
 <h3>SEALING ENDS</h3>
+
 <strong>2 500 ₽</strong>
+
 <p class="small">
 Запечатывание кончиков — дополнительная процедура.
 </p>
+
 </div>
 
+
 <div class="notice">
+
 <div>Волосы длиннее 70 см — индивидуальный расчёт.</div>
 <div>Густота более 8 см — доплата 1 000–2 500 ₽.</div>
 <div>Первое посещение — скидка 15%.</div>
 <div>Отметка в Stories — скидка 10% на следующее посещение.</div>
+
 </div>
+
 </section>
 
 
@@ -216,15 +423,27 @@ onclick="chooseCity('Чаплыгин')">
 <div class="selected-info" id="selectedInfo"></div>
 
 <label>Имя</label>
-<input id="name" placeholder="Ваше имя">
+
+<input
+id="name"
+placeholder="Ваше имя">
+
 
 <label>Telegram или номер телефона</label>
-<input id="contact" placeholder="@username или номер телефона">
+
+<input
+id="contact"
+placeholder="@username или номер телефона">
+
 
 <label>Процедура</label>
 
 <select id="procedureSelect">
-<option value="">Выберите процедуру</option>
+
+<option value="">
+Выберите процедуру
+</option>
+
 <option>KERATIN</option>
 <option>NANOPLASTIKA</option>
 <option>BOTOX IN HOT TECHNIQUE</option>
@@ -232,16 +451,19 @@ onclick="chooseCity('Чаплыгин')">
 <option>KERATIN + SEALING ENDS</option>
 <option>NANOPLASTIKA + SEALING ENDS</option>
 <option>BOTOX + SEALING ENDS</option>
+
 </select>
 
 
 <div class="photo-box">
 
-<strong>Фото волос</strong>
+<strong>Фото волос *</strong>
 
 <div class="small">
+
 Фотография обязательна для записи.
-Пожалуйста, прикрепите актуальное фото волос при хорошем освещении.
+Прикрепите актуальное фото волос при хорошем освещении.
+
 </div>
 
 <input
@@ -266,21 +488,30 @@ placeholder="Расскажите о волосах или задайте воп
 </textarea>
 
 
-<div class="terms" id="cityTerms"></div>
+<div
+class="terms"
+id="cityTerms">
+</div>
 
 
 <button
 style="margin-top:18px"
 onclick="sendBooking()">
+
 Отправить запись
+
 </button>
 
 </section>
 
 
-<section class="card hidden" id="sentCard">
+<section
+class="card hidden"
+id="sentCard">
 
-<h2>Спасибо за выбор SSSkeratin 🤍</h2>
+<h2>
+Спасибо за выбор SSSkeratin 🤍
+</h2>
 
 <p>
 Ваша заявка отправлена мастеру.
@@ -299,7 +530,9 @@ onclick="sendBooking()">
 </section>
 
 
-<div class="footer">SSSkeratin</div>
+<div class="footer">
+SSSkeratin
+</div>
 
 </div>
 
@@ -312,46 +545,62 @@ const API =
 let city = "";
 let selectedSlot = "";
 let selectedDate = "";
-let selectedPhoto = null;
 
 
-/* ГОРОД */
+/* =========================
+ГОРОД
+========================= */
 
 function chooseCity(value){
 
 city = value;
+
 selectedSlot = "";
 selectedDate = "";
 
-document.getElementById("moscow")
+document
+.getElementById("moscow")
 .classList.remove("active");
 
-document.getElementById("chaplygin")
+document
+.getElementById("chaplygin")
 .classList.remove("active");
 
 if(value === "Москва"){
-document.getElementById("moscow")
+
+document
+.getElementById("moscow")
 .classList.add("active");
+
 }
 
 if(value === "Чаплыгин"){
-document.getElementById("chaplygin")
+
+document
+.getElementById("chaplygin")
 .classList.add("active");
+
 }
 
-document.getElementById("selectedCity").innerText =
+document
+.getElementById("selectedCity")
+.innerText =
 "Свободные окошки — " + value;
 
-document.getElementById("formCard")
+document
+.getElementById("formCard")
 .classList.add("hidden");
 
 updateCityTerms();
-loadAllSlots();
+
+loadSlots();
 
 }
 
 
-/* УСЛОВИЯ */
+/* =========================
+УСЛОВИЯ
+========================= */
 
 function updateCityTerms(){
 
@@ -434,48 +683,23 @@ terms.innerHTML = `
 }
 
 
-/* ФОТО */
+/* =========================
+ЗАГРУЗКА ОКОШЕК
+========================= */
 
-function previewPhoto(){
-
-const input =
-document.getElementById("photo");
-
-const preview =
-document.getElementById("photoPreview");
-
-if(!input.files.length){
-
-selectedPhoto = null;
-preview.style.display = "none";
-return;
-
-}
-
-selectedPhoto =
-input.files[0];
-
-const reader =
-new FileReader();
-
-reader.onload = function(e){
-
-preview.src = e.target.result;
-preview.style.display = "block";
-
-};
-
-reader.readAsDataURL(selectedPhoto);
-
-}
-
-
-/* ВСЕ ОКОШКИ */
-
-async function loadAllSlots(){
+async function loadSlots(){
 
 const container =
 document.getElementById("slots");
+
+if(!city){
+
+container.innerHTML =
+'<div class="notice">Сначала выберите город.</div>';
+
+return;
+
+}
 
 container.innerHTML =
 '<div class="small">Загружаем свободные окошки...</div>';
@@ -483,49 +707,107 @@ container.innerHTML =
 try{
 
 const response =
-await fetch(API + "/all-slots");
+await fetch(
+API +
+"/slots?city=" +
+encodeURIComponent(city)
+);
 
 const data =
 await response.json();
 
 container.innerHTML = "";
 
-const citySlots =
-(data.slots || [])
-.filter(item => {
+let cityData = data.slots || [];
 
-if(item.city === city)
-return true;
+/*
+Worker может вернуть:
+
+1. массив дней
+2. один день
+3. массив с неправильной кодировкой
+
+Поэтому нормализуем ответ.
+*/
 
 if(
-city === "Москва" &&
-item.city.includes("РњРѕСЃРєРІР°")
-)
-return true;
+!Array.isArray(cityData)
+){
+
+cityData = [];
+
+}
 
 if(
-city === "Чаплыгин" &&
-item.city.includes("Р§Р°РїР»С‹РіРёРЅ")
-)
-return true;
+cityData.length === 0
+){
 
-return false;
+/*
+Запасной запрос всех окошек
+*/
 
-})
-.sort((a,b)=>
-a.date.localeCompare(b.date)
+const allResponse =
+await fetch(
+API + "/all-slots"
 );
 
-if(citySlots.length === 0){
+const allData =
+await allResponse.json();
+
+cityData =
+(allData.slots || [])
+.filter(item =>
+normalizeCity(item.city) === city
+);
+
+}
+
+
+/*
+Фильтруем ТОЛЬКО выбранный город
+*/
+
+cityData =
+cityData.filter(item =>
+normalizeCity(item.city) === city
+);
+
+
+/*
+Сортируем даты
+*/
+
+cityData.sort(
+(a,b) =>
+String(a.date)
+.localeCompare(
+String(b.date)
+)
+);
+
+
+if(cityData.length === 0){
 
 container.innerHTML =
-'<div class="notice">Свободных окошек пока нет.</div>';
+'<div class="notice">На данный момент свободных окошек нет.</div>';
 
 return;
 
 }
 
-citySlots.forEach(day => {
+
+/*
+Показываем все даты сразу
+*/
+
+cityData.forEach(day => {
+
+if(
+!day.slots ||
+!day.slots.length
+){
+return;
+}
 
 const title =
 document.createElement("div");
@@ -538,24 +820,36 @@ formatDate(day.date);
 
 container.appendChild(title);
 
+
 day.slots
-.sort((a,b)=>
-a.time.localeCompare(b.time)
+.sort(
+(a,b) =>
+String(a.time)
+.localeCompare(
+String(b.time)
+)
 )
 .forEach(item => {
 
 const slot =
 document.createElement("div");
 
-slot.className = "slot";
-slot.innerText = item.time;
+slot.className =
+"slot";
 
-slot.onclick = () =>
+slot.innerText =
+item.time;
+
+slot.onclick =
+function(){
+
 selectSlot(
 day.date,
 item.time,
 slot
 );
+
+};
 
 container.appendChild(slot);
 
@@ -565,6 +859,8 @@ container.appendChild(slot);
 
 }catch(error){
 
+console.error(error);
+
 container.innerHTML =
 '<div class="notice">Не удалось загрузить окошки.</div>';
 
@@ -573,9 +869,49 @@ container.innerHTML =
 }
 
 
-/* ВЫБОР ОКОШКА */
+/* =========================
+НОРМАЛИЗАЦИЯ ГОРОДА
+========================= */
 
-function selectSlot(date,time,element){
+function normalizeCity(value){
+
+const text =
+String(value || "");
+
+if(
+text === "Москва" ||
+text.includes("РњРѕСЃРєРІР°") ||
+text.toLowerCase().includes("моск")
+){
+
+return "Москва";
+
+}
+
+if(
+text === "Чаплыгин" ||
+text.includes("Р§Р°РїР»С‹РіРёРЅ") ||
+text.toLowerCase().includes("чап")
+){
+
+return "Чаплыгин";
+
+}
+
+return text;
+
+}
+
+
+/* =========================
+ВЫБОР ОКОШКА
+========================= */
+
+function selectSlot(
+date,
+time,
+element
+){
 
 document
 .querySelectorAll(".slot")
@@ -588,16 +924,21 @@ element.classList.add("active");
 selectedDate = date;
 selectedSlot = time;
 
-document.getElementById("selectedInfo").innerText =
-city + " · " +
+document
+.getElementById("selectedInfo")
+.innerText =
+city +
+" · " +
 formatDate(date) +
 " · " +
 time;
 
-document.getElementById("formCard")
+document
+.getElementById("formCard")
 .classList.remove("hidden");
 
-document.getElementById("formCard")
+document
+.getElementById("formCard")
 .scrollIntoView({
 behavior:"smooth",
 block:"center"
@@ -606,28 +947,102 @@ block:"center"
 }
 
 
-/* ОТПРАВКА */
+/* =========================
+ФОТО
+========================= */
+
+function previewPhoto(){
+
+const input =
+document.getElementById("photo");
+
+const preview =
+document.getElementById("photoPreview");
+
+if(
+!input.files ||
+!input.files.length
+){
+
+preview.style.display =
+"none";
+
+return;
+
+}
+
+const file =
+input.files[0];
+
+if(
+file.size >
+7 * 1024 * 1024
+){
+
+alert(
+"Фото должно быть не больше 7 МБ."
+);
+
+input.value = "";
+
+preview.style.display =
+"none";
+
+return;
+
+}
+
+const reader =
+new FileReader();
+
+reader.onload =
+function(e){
+
+preview.src =
+e.target.result;
+
+preview.style.display =
+"block";
+
+};
+
+reader.readAsDataURL(file);
+
+}
+
+
+/* =========================
+ОТПРАВКА ЗАЯВКИ
+========================= */
 
 async function sendBooking(){
 
 const name =
-document.getElementById("name")
-.value.trim();
+document
+.getElementById("name")
+.value
+.trim();
 
 const contact =
-document.getElementById("contact")
-.value.trim();
+document
+.getElementById("contact")
+.value
+.trim();
 
 const procedure =
-document.getElementById("procedureSelect")
+document
+.getElementById("procedureSelect")
 .value;
 
 const comment =
-document.getElementById("comment")
-.value.trim();
+document
+.getElementById("comment")
+.value
+.trim();
 
 const photoInput =
-document.getElementById("photo");
+document
+.getElementById("photo");
 
 
 if(
@@ -639,13 +1054,18 @@ if(
 !procedure
 ){
 
-alert("Заполните все обязательные поля.");
+alert(
+"Заполните все обязательные поля."
+);
+
 return;
 
 }
 
 
-/* ФОТО ОБЯЗАТЕЛЬНО */
+/*
+Фото обязательно
+*/
 
 if(
 !photoInput.files ||
@@ -653,7 +1073,7 @@ if(
 ){
 
 alert(
-"Чтобы записаться, необходимо прикрепить фотографию волос."
+"Без фотографии волос запись невозможна. Прикрепите фото."
 );
 
 photoInput.scrollIntoView({
@@ -669,13 +1089,13 @@ return;
 const file =
 photoInput.files[0];
 
-
-/* Ограничение размера */
-
-if(file.size > 7 * 1024 * 1024){
+if(
+file.size >
+7 * 1024 * 1024
+){
 
 alert(
-"Фотография слишком большая. Выберите фото до 7 МБ."
+"Фото должно быть не больше 7 МБ."
 );
 
 return;
@@ -683,21 +1103,25 @@ return;
 }
 
 
-/* Фото в Base64 */
-
 const photoData =
 await fileToBase64(file);
 
 
 const body = {
 
-city,
+city:city,
+
 date:selectedDate,
+
 time:selectedSlot,
-name,
-contact,
-procedure,
-comment,
+
+name:name,
+
+contact:contact,
+
+procedure:procedure,
+
+comment:comment,
 
 photo:{
 name:file.name,
@@ -715,15 +1139,21 @@ await fetch(
 API + "/book",
 {
 method:"POST",
+
 headers:{
 "Content-Type":"application/json"
 },
-body:JSON.stringify(body)
+
+body:
+JSON.stringify(body)
+
 }
 );
 
+
 const result =
 await response.json();
+
 
 if(!result.ok){
 
@@ -736,18 +1166,25 @@ return;
 
 }
 
-document.getElementById("formCard")
+
+document
+.getElementById("formCard")
 .classList.add("hidden");
 
-document.getElementById("sentCard")
+document
+.getElementById("sentCard")
 .classList.remove("hidden");
 
-document.getElementById("sentCard")
+document
+.getElementById("sentCard")
 .scrollIntoView({
 behavior:"smooth"
 });
 
+
 }catch(error){
+
+console.error(error);
 
 alert(
 "Не удалось отправить запись. Попробуйте ещё раз."
@@ -758,16 +1195,20 @@ alert(
 }
 
 
-/* BASE64 */
+/* =========================
+BASE64
+========================= */
 
 function fileToBase64(file){
 
-return new Promise((resolve,reject)=>{
+return new Promise(
+(resolve,reject)=>{
 
 const reader =
 new FileReader();
 
-reader.onload = () => {
+reader.onload =
+function(){
 
 const result =
 reader.result;
@@ -784,17 +1225,22 @@ reject;
 
 reader.readAsDataURL(file);
 
-});
+}
+);
 
 }
 
 
-/* ДАТА */
+/* =========================
+ДАТА
+========================= */
 
 function formatDate(date){
 
 const d =
-new Date(date + "T12:00:00");
+new Date(
+date + "T12:00:00"
+);
 
 return d.toLocaleDateString(
 "ru-RU",
