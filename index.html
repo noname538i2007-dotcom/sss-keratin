@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SSSkeratin — запись</title>
+
+<title>SSSkeratin</title>
 
 <style>
 * {
@@ -12,138 +13,194 @@
 
 body {
   margin: 0;
-  background: #f8f5f2;
-  color: #292522;
+  background: #f8f6f4;
+  color: #292624;
   font-family: Arial, sans-serif;
 }
 
 .container {
-  max-width: 600px;
+  max-width: 620px;
   margin: auto;
-  padding: 25px 16px 50px;
+  padding: 25px 18px 60px;
 }
 
-.header {
+.hero {
   text-align: center;
-  padding: 30px 0;
+  padding: 55px 10px 35px;
 }
 
 .logo {
-  font-size: 32px;
-  font-weight: bold;
-  letter-spacing: 2px;
+  font-size: 38px;
+  font-weight: 600;
+  letter-spacing: 3px;
 }
 
-.subtitle {
-  margin-top: 8px;
+.hero p {
+  margin: 15px auto 0;
+  max-width: 470px;
+  line-height: 1.6;
   color: #777;
 }
 
 .card {
-  background: white;
-  border-radius: 20px;
-  padding: 20px;
-  margin-bottom: 15px;
-  box-shadow: 0 5px 20px rgba(0,0,0,.05);
+  background: #fff;
+  border-radius: 22px;
+  padding: 23px;
+  margin-bottom: 18px;
+  box-shadow: 0 7px 25px rgba(0,0,0,.045);
 }
 
 h2 {
-  margin-top: 0;
-  font-size: 20px;
+  margin: 0 0 17px;
+  font-size: 21px;
 }
 
-label {
+h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+p {
+  line-height: 1.55;
+}
+
+.social {
   display: block;
-  margin-top: 15px;
-  margin-bottom: 7px;
+  padding: 16px;
+  margin-top: 10px;
+  border-radius: 15px;
+  background: #f4f0ed;
+  color: #292624;
+  text-decoration: none;
+}
+
+.social strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.social span {
+  font-size: 13px;
+  color: #777;
+}
+
+.city-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+button {
+  width: 100%;
+  border: 0;
+  border-radius: 14px;
+  padding: 15px;
+  background: #292624;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.city-button {
+  background: #f0ebe7;
+  color: #292624;
+}
+
+.city-button.active {
+  background: #292624;
+  color: white;
+}
+
+.procedure {
+  border-bottom: 1px solid #eee8e4;
+  padding: 18px 0;
+}
+
+.procedure:last-child {
+  border-bottom: 0;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9px;
   font-size: 14px;
+}
+
+.price-row span:last-child {
+  font-weight: 600;
+}
+
+.small {
+  color: #777;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.ends {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 15px;
+  background: #f4f0ed;
+}
+
+.slot {
+  padding: 14px;
+  border: 1px solid #ddd6d1;
+  border-radius: 13px;
+  margin-top: 9px;
+  cursor: pointer;
+}
+
+.slot.active {
+  background: #292624;
+  color: white;
 }
 
 input,
 select,
 textarea {
   width: 100%;
-  padding: 13px;
-  border: 1px solid #ddd5cf;
-  border-radius: 12px;
-  font-size: 16px;
+  padding: 14px;
+  margin-top: 7px;
+  border: 1px solid #ddd6d1;
+  border-radius: 13px;
   background: white;
+  font-size: 15px;
 }
 
-textarea {
-  min-height: 90px;
-  resize: vertical;
-}
-
-button,
-.pay-button {
-  width: 100%;
-  padding: 15px;
-  border: 0;
-  border-radius: 14px;
-  background: #292522;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  text-align: center;
+label {
   display: block;
-  text-decoration: none;
-}
-
-.secondary {
-  background: #eee9e5;
-  color: #292522;
-  margin-top: 10px;
-}
-
-.price {
-  display: flex;
-  justify-content: space-between;
-  padding: 11px 0;
-  border-bottom: 1px solid #eee;
+  margin-top: 15px;
   font-size: 14px;
 }
 
 .notice {
-  background: #f1ece8;
-  padding: 14px;
-  border-radius: 12px;
+  padding: 15px;
+  border-radius: 14px;
+  background: #f4f0ed;
   margin-top: 15px;
   font-size: 14px;
-  line-height: 1.5;
-}
-
-.slot {
-  border: 1px solid #ddd5cf;
-  padding: 13px;
-  border-radius: 12px;
-  margin-top: 8px;
-  cursor: pointer;
-}
-
-.slot.selected {
-  background: #292522;
-  color: white;
+  line-height: 1.55;
 }
 
 .hidden {
   display: none;
 }
 
+.main-button {
+  margin-top: 18px;
+}
+
 .success {
   text-align: center;
 }
 
-.success-icon {
-  font-size: 45px;
-}
-
-.tabs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  margin-bottom: 15px;
+.footer {
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  padding: 20px;
 }
 </style>
 </head>
@@ -152,204 +209,349 @@ button,
 
 <div class="container">
 
-<div class="header">
-  <div class="logo">SSSkeratin</div>
-  <div class="subtitle">гладкость • уход • восстановление</div>
+<!-- ПЕРВЫЙ ЭКРАН -->
+
+<section class="hero">
+
+<div class="logo">SSSkeratin</div>
+
+<p>
+Ира — специалист по волосам.  
+Индивидуально подбираю процедуры с учётом состояния волос,
+их особенностей и желаемого результата.
+</p>
+
+</section>
+
+
+<!-- СОЦСЕТИ -->
+
+<section class="card">
+
+<h2>Обо мне</h2>
+
+<p class="small">
+Работаю с волосами индивидуально и внимательно отношусь
+к состоянию волос перед каждой процедурой.
+</p>
+
+<a
+class="social"
+href="https://instagram.com/ssskeratin"
+target="_blank">
+
+<strong>Instagram · @ssskeratin</strong>
+<span>Посмотреть работы</span>
+
+</a>
+
+<a
+class="social"
+href="https://t.me/keratinirir"
+target="_blank">
+
+<strong>Telegram-канал · @keratinirir</strong>
+<span>Работы и информация</span>
+
+</a>
+
+<a
+class="social"
+href="https://t.me/SSSkeratin"
+target="_blank">
+
+<strong>Telegram для записи · @SSSkeratin</strong>
+<span>Связаться со мной</span>
+
+</a>
+
+</section>
+
+
+<!-- ГОРОД -->
+
+<section class="card">
+
+<h2>Выберите место</h2>
+
+<div class="city-buttons">
+
+<button
+class="city-button"
+id="moscow"
+onclick="chooseCity('Москва')">
+Москва
+</button>
+
+<button
+class="city-button"
+id="chaplygin"
+onclick="chooseCity('Чаплыгин')">
+Чаплыгин
+</button>
+
 </div>
 
-<div class="tabs">
-  <button onclick="showBooking()">Запись</button>
-  <button class="secondary" onclick="showPrice()">Прайс</button>
+</section>
+
+
+<!-- ПРОЦЕДУРЫ -->
+
+<section class="card">
+
+<h2>Процедуры</h2>
+
+
+<div class="procedure">
+
+<h3>KERATIN</h3>
+
+<div class="price-row">
+<span>20 см</span><span>3 000 ₽</span>
 </div>
 
-<!-- ПРАЙС -->
+<div class="price-row">
+<span>30 см</span><span>4 000 ₽</span>
+</div>
 
-<div id="price" class="card hidden">
+<div class="price-row">
+<span>40 см</span><span>5 000 ₽</span>
+</div>
 
-<h2>Прайс</h2>
+<div class="price-row">
+<span>50 см</span><span>6 000 ₽</span>
+</div>
 
-<div class="price"><span>KERATIN · 20 см</span><b>3 000 ₽</b></div>
-<div class="price"><span>KERATIN · 30 см</span><b>4 000 ₽</b></div>
-<div class="price"><span>KERATIN · 40 см</span><b>5 000 ₽</b></div>
-<div class="price"><span>KERATIN · 50 см</span><b>6 000 ₽</b></div>
-<div class="price"><span>KERATIN · 60 см</span><b>7 000 ₽</b></div>
-<div class="price"><span>KERATIN · 70 см</span><b>8 000 ₽</b></div>
+<div class="price-row">
+<span>60 см</span><span>7 000 ₽</span>
+</div>
 
-<div class="price"><span>NANOPLASTIKA · 20 см</span><b>3 000 ₽</b></div>
-<div class="price"><span>NANOPLASTIKA · 30 см</span><b>5 000 ₽</b></div>
-<div class="price"><span>NANOPLASTIKA · 40 см</span><b>6 000 ₽</b></div>
-<div class="price"><span>NANOPLASTIKA · 50 см</span><b>7 000 ₽</b></div>
-<div class="price"><span>NANOPLASTIKA · 60 см</span><b>8 000 ₽</b></div>
-<div class="price"><span>NANOPLASTIKA · 70 см</span><b>9 000 ₽</b></div>
+<div class="price-row">
+<span>70 см</span><span>8 000 ₽</span>
+</div>
 
-<div class="price"><span>BOTOX IN HOT TECHNIQUE · 20 см</span><b>2 500 ₽</b></div>
-<div class="price"><span>BOTOX IN HOT TECHNIQUE · 30 см</span><b>3 500 ₽</b></div>
-<div class="price"><span>BOTOX IN HOT TECHNIQUE · 40 см</span><b>4 500 ₽</b></div>
-<div class="price"><span>BOTOX IN HOT TECHNIQUE · 50 см</span><b>5 500 ₽</b></div>
-<div class="price"><span>BOTOX IN HOT TECHNIQUE · 60 см</span><b>6 500 ₽</b></div>
-<div class="price"><span>BOTOX IN HOT TECHNIQUE · 70 см</span><b>7 000 ₽</b></div>
+</div>
+
+
+<div class="procedure">
+
+<h3>NANOPLASTIKA</h3>
+
+<div class="price-row">
+<span>20 см</span><span>3 000 ₽</span>
+</div>
+
+<div class="price-row">
+<span>30 см</span><span>5 000 ₽</span>
+</div>
+
+<div class="price-row">
+<span>40 см</span><span>6 000 ₽</span>
+</div>
+
+<div class="price-row">
+<span>50 см</span><span>7 000 ₽</span>
+</div>
+
+<div class="price-row">
+<span>60 см</span><span>8 000 ₽</span>
+</div>
+
+<div class="price-row">
+<span>70 см</span><span>9 000 ₽</span>
+</div>
+
+</div>
+
+
+<div class="procedure">
+
+<h3>BOTOX IN HOT TECHNIQUE</h3>
+
+<div class="price-row">
+<span>20 см</span><span>2 500 ₽</span>
+</div>
+
+<div class="price-row">
+<span>30 см</span><span>3 500 ₽</span>
+</div>
+
+<div class="price-row">
+<span>40 см</span><span>4 500 ₽</span>
+</div>
+
+<div class="price-row">
+<span>50 см</span><span>5 500 ₽</span>
+</div>
+
+<div class="price-row">
+<span>60 см</span><span>6 500 ₽</span>
+</div>
+
+<div class="price-row">
+<span>70 см</span><span>7 000 ₽</span>
+</div>
+
+</div>
+
+
+<div class="ends">
+
+<h3>SEALING ENDS</h3>
+
+<strong>2 500 ₽</strong>
+
+<p class="small">
+Запечатывание кончиков — дополнительная процедура для ухода
+за самой уязвимой частью волос. Её можно совмещать с любой
+основной процедурой для более сильной защиты кончиков.
+</p>
+
+</div>
+
 
 <div class="notice">
-Волосы длиннее 70 см рассчитываются индивидуально.<br>
-При густоте более 8 см доплата 1 000–2 500 ₽.<br>
-Скидка на первое посещение — 15%.
-</div>
+
+Волосы длиннее 70 см — индивидуальный расчёт.<br>
+Густота более 8 см — доплата 1 000–2 500 ₽.<br>
+Первое посещение — скидка 15%.<br>
+Отметка в Stories — скидка 10% на следующее посещение.
 
 </div>
+
+</section>
 
 
 <!-- ЗАПИСЬ -->
 
-<div id="booking">
+<section class="card">
 
-<div class="card">
+<h2>Свободные окошки</h2>
 
-<h2>Выберите город</h2>
-
-<select id="city">
-<option value="">Выберите город</option>
-<option value="Москва">Москва</option>
-<option value="Чаплыгин">Чаплыгин</option>
-</select>
+<div id="selectedCity" class="small">
+Сначала выберите город.
+</div>
 
 <label>Дата</label>
-<input type="date" id="date">
 
-<div id="slots" style="margin-top:15px;color:#777;">
-Выберите город и дату
+<input
+type="date"
+id="date"
+onchange="loadSlots()">
+
+<div id="slots">
+
 </div>
 
-</div>
+</section>
 
 
-<form id="bookingForm">
+<!-- АНКЕТА -->
 
-<div class="card">
+<section
+class="card hidden"
+id="formCard">
 
-<h2>О вас</h2>
+<h2>Запись</h2>
 
 <label>Имя</label>
-<input id="name" required>
+<input id="name">
 
 <label>Telegram или номер телефона</label>
-<input id="contact" required>
-
-</div>
-
-
-<div class="card">
-
-<h2>О волосах</h2>
+<input id="contact">
 
 <label>Процедура</label>
 
-<select id="procedure" required>
-<option value="">Выберите</option>
-<option>KERATIN</option>
-<option>NANOPLASTIKA</option>
-<option>BOTOX IN HOT TECHNIQUE</option>
-<option>Не знаю, что выбрать</option>
+<select id="procedureSelect">
+
+<option value="">
+Выберите процедуру
+</option>
+
+<option>
+KERATIN
+</option>
+
+<option>
+NANOPLASTIKA
+</option>
+
+<option>
+BOTOX IN HOT TECHNIQUE
+</option>
+
+<option>
+SEALING ENDS
+</option>
+
+<option>
+KERATIN + SEALING ENDS
+</option>
+
+<option>
+NANOPLASTIKA + SEALING ENDS
+</option>
+
+<option>
+BOTOX + SEALING ENDS
+</option>
+
 </select>
 
 
-<label>Делали ли ранее горячие процедуры?</label>
+<label>Комментарий</label>
 
-<select id="previous">
-<option>Нет</option>
-<option>Да</option>
-</select>
+<textarea
+id="comment"
+placeholder="Расскажите о волосах или задайте вопрос">
+</textarea>
 
-
-<label>Если да — какие и когда?</label>
-<input id="previousDetails">
-
-
-<label>Что сейчас беспокоит в волосах?</label>
-<textarea id="concern"></textarea>
-
-
-<label>Какой результат хотите получить?</label>
-<textarea id="result"></textarea>
-
-
-<label>Были ли аллергические реакции?</label>
-
-<select id="allergy">
-<option>Нет</option>
-<option>Да</option>
-<option>Не знаю</option>
-</select>
-
-
-<label>Фото волос</label>
-<input type="file" id="photo" accept="image/*">
-
-</div>
-
-
-<!-- ПРЕДОПЛАТА -->
-
-<div id="payment" class="card hidden">
-
-<h2>Предоплата</h2>
-
-<p>
-Для подтверждения записи необходимо внести предоплату
-<strong>1 000 ₽</strong>.
-</p>
-
-<a
-id="paymentLink"
-class="pay-button"
-target="_blank">
-Оплатить 1 000 ₽
-</a>
 
 <div class="notice">
-При отмене записи менее чем за 3 дня до назначенной процедуры
-предоплата не возвращается.
-</div>
+
+После отправки записи в течение рабочего времени
+вам поступит сообщение с реквизитами для внесения
+предоплаты.
 
 </div>
 
 
-<div class="card">
+<button
+class="main-button"
+onclick="sendBooking()">
 
-<button type="submit">
 Отправить запись
+
 </button>
 
-<a
-href="https://t.me/SSSkeratin"
-target="_blank"
-class="pay-button secondary">
-Написать мне в Telegram
-</a>
-
-</div>
-
-</form>
+</section>
 
 
-<div id="success" class="card success hidden">
+<!-- ПОСЛЕ ОТПРАВКИ -->
 
-<div class="success-icon">✓</div>
+<section
+class="card hidden"
+id="sentCard">
 
-<h2>Запись подтверждена</h2>
+<h2>Спасибо за выбор SSSkeratin 🤍</h2>
 
 <p>
-Оплата получена. Ваше окошко закреплено за вами.
+Вам поступит сообщение с реквизитами для перевода
+предоплаты.
 </p>
 
-<a
-href="https://t.me/SSSkeratin"
-target="_blank"
-class="pay-button">
-Написать мастеру
-</a>
+<p>
+После оплаты вам поступит ссылка на вашу запись
+с городом, датой, временем, процедурой и адресом.
+</p>
 
-</div>
+<div class="notice" id="paymentInfo"></div>
 
+</section>
+
+
+<div class="footer">
+SSSkeratin
 </div>
 
 </div>
@@ -360,55 +562,71 @@ class="pay-button">
 const API =
 "https://sss-keratin-api.noname538i2007.workers.dev";
 
-let selectedSlot = null;
+let city = "";
+let selectedSlot = "";
 
 
-function showPrice() {
+function chooseCity(value) {
 
-document.getElementById("price")
-.classList.remove("hidden");
+city = value;
 
-document.getElementById("booking")
-.classList.add("hidden");
+document
+.getElementById("moscow")
+.classList.remove("active");
+
+document
+.getElementById("chaplygin")
+.classList.remove("active");
+
+
+if (value === "Москва") {
+
+document
+.getElementById("moscow")
+.classList.add("active");
 
 }
 
 
-function showBooking() {
+if (value === "Чаплыгин") {
 
-document.getElementById("price")
-.classList.add("hidden");
+document
+.getElementById("chaplygin")
+.classList.add("active");
 
-document.getElementById("booking")
-.classList.remove("hidden");
+}
+
+
+document
+.getElementById("selectedCity")
+.innerText =
+"Выбран город: " + value;
+
+loadSlots();
 
 }
 
 
 async function loadSlots() {
 
-const city =
-document.getElementById("city").value;
-
 const date =
 document.getElementById("date").value;
 
-const box =
+const slots =
 document.getElementById("slots");
 
 
 if (!city || !date) {
 
-box.innerText =
-"Выберите город и дату";
+slots.innerHTML = "";
 
 return;
 
 }
 
 
-box.innerText =
-"Загружаем свободные окошки...";
+slots.innerHTML =
+'<div class="small">Загружаем свободные окошки...</div>';
 
 
 try {
@@ -422,141 +640,113 @@ encodeURIComponent(city) +
 encodeURIComponent(date)
 );
 
+
 const data =
 await response.json();
 
-box.innerHTML = "";
+
+slots.innerHTML = "";
+
 
 if (!data.slots || data.slots.length === 0) {
 
-box.innerHTML =
-'<div class="notice">На эту дату свободных окошек нет.</div>';
+slots.innerHTML =
+'<div class="notice">На выбранную дату свободных окошек нет.</div>';
 
 return;
 
 }
 
 
-data.slots.forEach(slot => {
+data.slots.forEach(item => {
 
-const element =
+const div =
 document.createElement("div");
 
-element.className =
-"slot";
+div.className = "slot";
 
-element.innerText =
-slot.time;
+div.innerText = item.time;
 
-element.onclick = function() {
+div.onclick = () => {
 
 document
 .querySelectorAll(".slot")
 .forEach(x =>
-x.classList.remove("selected")
+x.classList.remove("active")
 );
 
-element.classList.add("selected");
+div.classList.add("active");
 
 selectedSlot =
-slot;
+item.time;
+
+document
+.getElementById("formCard")
+.classList.remove("hidden");
 
 };
 
-box.appendChild(element);
+slots.appendChild(div);
 
 });
 
 } catch(error) {
 
-box.innerHTML =
-'<div class="notice">Не удалось загрузить окошки.</div>';
+slots.innerHTML =
+'<div class="notice">Не удалось загрузить свободные окошки.</div>';
 
 }
 
 }
 
 
-document
-.getElementById("city")
-.addEventListener("change", loadSlots);
+async function sendBooking() {
 
-document
-.getElementById("date")
-.addEventListener("change", loadSlots);
+const name =
+document.getElementById("name").value;
+
+const contact =
+document.getElementById("contact").value;
+
+const procedure =
+document.getElementById("procedureSelect").value;
+
+const comment =
+document.getElementById("comment").value;
+
+const date =
+document.getElementById("date").value;
 
 
-document
-.getElementById("bookingForm")
-.addEventListener("submit", async function(event) {
+if (
+!city ||
+!date ||
+!selectedSlot ||
+!name ||
+!contact ||
+!procedure
+) {
 
-event.preventDefault();
-
-
-if (!selectedSlot) {
-
-alert("Выберите свободное время.");
+alert(
+"Заполните все обязательные поля."
+);
 
 return;
 
 }
 
 
-const city =
-document.getElementById("city").value;
+const body = {
 
+city: city,
+date: date,
+time: selectedSlot,
+name: name,
+contact: contact,
+procedure: procedure,
+comment: comment
 
-const formData =
-new FormData();
-
-
-formData.append(
-"city",
-city
-);
-
-formData.append(
-"date",
-document.getElementById("date").value
-);
-
-formData.append(
-"time",
-selectedSlot.time
-);
-
-
-[
-"name",
-"contact",
-"procedure",
-"previous",
-"previousDetails",
-"concern",
-"result",
-"allergy"
-].forEach(function(id) {
-
-formData.append(
-id,
-document.getElementById(id).value
-);
-
-});
-
-
-const photo =
-document.getElementById("photo").files[0];
-
-
-if (photo) {
-
-formData.append(
-"photo",
-photo
-);
-
-}
+};
 
 
 try {
@@ -565,56 +755,62 @@ const response =
 await fetch(
 API + "/book",
 {
-method:"POST",
-body:formData
+method: "POST",
+headers: {
+"Content-Type": "application/json"
+},
+body: JSON.stringify(body)
 }
 );
 
 
-const data =
+const result =
 await response.json();
 
 
-if (!data.ok) {
+if (!result.ok) {
 
-alert("Это окошко уже заняли. Выберите другое.");
+alert(
+"Не удалось отправить запись. Возможно, это время уже занято."
+);
 
 return;
 
 }
 
 
-if (city === "Москва") {
-
 document
-.getElementById("payment")
-.classList.remove("hidden");
-
-
-document
-.getElementById("paymentLink")
-.href =
-data.paymentUrl || "#";
-
-} else {
-
-document
-.getElementById("bookingForm")
+.getElementById("formCard")
 .classList.add("hidden");
 
+
 document
-.getElementById("success")
+.getElementById("sentCard")
 .classList.remove("hidden");
 
-}
+
+const amount =
+city === "Москва"
+? "1 000 ₽"
+: "500 ₽";
+
+
+document
+.getElementById("paymentInfo")
+.innerText =
+"Предоплата: " +
+amount +
+". Она входит в стоимость процедуры. После процедуры оплачивается только оставшаяся сумма.";
 
 } catch(error) {
 
-alert("Не удалось отправить запись.");
+alert(
+"Не удалось отправить запись. Попробуйте ещё раз."
+);
 
 }
 
-});
+}
 
 </script>
 
