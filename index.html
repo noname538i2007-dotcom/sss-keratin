@@ -1,246 +1,298 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<meta
+name="viewport"
+content="width=device-width,initial-scale=1.0"
+>
+
 <title>SSSkeratin</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com"
+>
+
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin
+>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap"
+rel="stylesheet"
+>
 
 <style>
-*{box-sizing:border-box}
+
+*{
+  box-sizing:border-box
+}
 
 body{
-margin:0;
-color:#292522;
-font-family:'Montserrat',sans-serif;
-background:
-radial-gradient(ellipse at 15% 10%,rgba(255,255,255,.95),transparent 38%),
-radial-gradient(ellipse at 85% 30%,rgba(211,193,174,.38),transparent 40%),
-linear-gradient(135deg,#eee7df,#f8f5f1 45%,#e7ddd4);
+  margin:0;
+  color:#292522;
+  font-family:'Montserrat',sans-serif;
+
+  background:
+    radial-gradient(
+      ellipse at 15% 10%,
+      rgba(255,255,255,.95),
+      transparent 38%
+    ),
+
+    radial-gradient(
+      ellipse at 85% 30%,
+      rgba(211,193,174,.38),
+      transparent 40%
+    ),
+
+    linear-gradient(
+      135deg,
+      #eee7df,
+      #f8f5f1 45%,
+      #e7ddd4
+    );
 }
 
 .container{
-max-width:650px;
-margin:auto;
-padding:20px 16px 65px
+  max-width:650px;
+  margin:auto;
+  padding:20px 16px 65px
 }
 
 .hero{
-text-align:center;
-padding:65px 15px 45px
+  text-align:center;
+  padding:65px 15px 45px
 }
 
 .logo{
-font-family:'Cormorant Garamond',serif;
-font-size:58px;
-letter-spacing:5px
+  font-family:'Cormorant Garamond',serif;
+  font-size:58px;
+  letter-spacing:5px
 }
 
 .hero-subtitle{
-margin-top:14px;
-font-size:12px;
-letter-spacing:3px;
-text-transform:uppercase;
-color:#817267
+  margin-top:14px;
+  font-size:12px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:#817267
 }
 
 .hero p{
-margin:22px auto 0;
-max-width:500px;
-line-height:1.75;
-font-size:14px;
-color:#70665e
+  margin:22px auto 0;
+  max-width:500px;
+  line-height:1.75;
+  font-size:14px;
+  color:#70665e
 }
 
 .card{
-background:rgba(255,255,255,.72);
-backdrop-filter:blur(16px);
-border:1px solid rgba(255,255,255,.8);
-border-radius:26px;
-padding:25px;
-margin-bottom:18px;
-box-shadow:0 15px 45px rgba(83,63,47,.08)
+  background:rgba(255,255,255,.72);
+  backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,.8);
+  border-radius:26px;
+  padding:25px;
+  margin-bottom:18px;
+  box-shadow:0 15px 45px rgba(83,63,47,.08)
 }
 
 h2{
-margin:0 0 18px;
-font-family:'Cormorant Garamond',serif;
-font-size:29px;
-font-weight:500
+  margin:0 0 18px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:29px;
+  font-weight:500
 }
 
 h3{
-font-family:'Cormorant Garamond',serif;
-font-size:22px;
-font-weight:600
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;
+  font-weight:600
 }
 
 .small{
-color:#756b63;
-font-size:13px;
-line-height:1.65
+  color:#756b63;
+  font-size:13px;
+  line-height:1.65
 }
 
 .social{
-display:block;
-padding:17px 18px;
-margin-top:11px;
-border-radius:16px;
-background:rgba(244,239,234,.78);
-color:#292522;
-text-decoration:none
+  display:block;
+  padding:17px 18px;
+  margin-top:11px;
+  border-radius:16px;
+  background:rgba(244,239,234,.78);
+  color:#292522;
+  text-decoration:none
 }
 
 .social strong{
-display:block;
-margin-bottom:5px;
-font-size:14px
+  display:block;
+  margin-bottom:5px;
+  font-size:14px
 }
 
 .social span{
-font-size:12px;
-color:#857a71
+  font-size:12px;
+  color:#857a71
 }
 
 .city-buttons{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:11px
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:11px
 }
 
 button{
-width:100%;
-border:0;
-border-radius:15px;
-padding:15px;
-background:#302b27;
-color:white;
-font-family:'Montserrat',sans-serif;
-font-size:14px;
-cursor:pointer
+  width:100%;
+  border:0;
+  border-radius:15px;
+  padding:15px;
+  background:#302b27;
+  color:white;
+  font-family:'Montserrat',sans-serif;
+  font-size:14px;
+  cursor:pointer
+}
+
+button:disabled{
+  opacity:.6;
+  cursor:not-allowed
 }
 
 .city-button{
-background:rgba(238,231,224,.9);
-color:#302b27
+  background:rgba(238,231,224,.9);
+  color:#302b27
 }
 
 .city-button.active{
-background:#302b27;
-color:white
+  background:#302b27;
+  color:white
 }
 
 .procedure{
-padding:20px 0;
-border-bottom:1px solid rgba(120,100,85,.12)
+  padding:20px 0;
+  border-bottom:1px solid rgba(120,100,85,.12)
 }
 
 .price-row{
-display:flex;
-justify-content:space-between;
-margin-top:9px;
-font-size:13px;
-color:#6e655e
+  display:flex;
+  justify-content:space-between;
+  margin-top:9px;
+  font-size:13px;
+  color:#6e655e
 }
 
 .price-row span:last-child{
-font-weight:600;
-color:#292522
+  font-weight:600;
+  color:#292522
 }
 
 .ends,
 .notice,
 .terms,
 .selected-info{
-margin-top:17px;
-padding:17px;
-border-radius:17px;
-background:rgba(239,232,225,.82);
-font-size:13px;
-line-height:1.7;
-color:#675e57
+  margin-top:17px;
+  padding:17px;
+  border-radius:17px;
+  background:rgba(239,232,225,.82);
+  font-size:13px;
+  line-height:1.7;
+  color:#675e57
 }
 
 label{
-display:block;
-margin-top:16px;
-font-size:12px;
-color:#766c64
+  display:block;
+  margin-top:16px;
+  font-size:12px;
+  color:#766c64
 }
 
 input,
 select,
 textarea{
-width:100%;
-padding:14px 15px;
-margin-top:7px;
-border:1px solid rgba(125,105,90,.18);
-border-radius:14px;
-background:rgba(255,255,255,.8);
-font-family:'Montserrat',sans-serif;
-font-size:14px;
-color:#292522
+  width:100%;
+  padding:14px 15px;
+  margin-top:7px;
+  border:1px solid rgba(125,105,90,.18);
+  border-radius:14px;
+  background:rgba(255,255,255,.8);
+  font-family:'Montserrat',sans-serif;
+  font-size:14px;
+  color:#292522
 }
 
 textarea{
-min-height:95px;
-resize:vertical
+  min-height:95px;
+  resize:vertical
 }
 
 .slot-date{
-margin-top:22px;
-padding-bottom:9px;
-border-bottom:1px solid rgba(120,100,85,.15);
-font-family:'Cormorant Garamond',serif;
-font-size:22px;
-font-weight:600
+  margin-top:22px;
+  padding-bottom:9px;
+  border-bottom:1px solid rgba(120,100,85,.15);
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;
+  font-weight:600
 }
 
 .slot{
-padding:15px 16px;
-margin-top:9px;
-border:1px solid rgba(120,100,85,.18);
-border-radius:14px;
-background:rgba(255,255,255,.65);
-cursor:pointer
+  padding:15px 16px;
+  margin-top:9px;
+  border:1px solid rgba(120,100,85,.18);
+  border-radius:14px;
+  background:rgba(255,255,255,.65);
+  cursor:pointer
 }
 
 .slot.active{
-background:#302b27;
-color:white
+  background:#302b27;
+  color:white
 }
 
 .photo-box{
-margin-top:15px;
-padding:18px;
-border-radius:17px;
-background:rgba(239,232,225,.82)
+  margin-top:15px;
+  padding:18px;
+  border-radius:17px;
+  background:rgba(239,232,225,.82)
 }
 
 .photo-preview{
-display:none;
-width:100%;
-max-height:280px;
-object-fit:cover;
-border-radius:14px;
-margin-top:12px
+  display:none;
+  width:100%;
+  max-height:280px;
+  object-fit:cover;
+  border-radius:14px;
+  margin-top:12px
 }
 
 .hidden{
-display:none
+  display:none
 }
 
 .footer{
-text-align:center;
-color:#8c8178;
-font-family:'Cormorant Garamond',serif;
-font-size:18px;
-padding:25px
+  text-align:center;
+  color:#8c8178;
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px;
+  padding:25px
 }
+
+.loading{
+  text-align:center;
+  padding:15px;
+  color:#756b63;
+  font-size:13px
+}
+
 </style>
+
 </head>
 
 <body>
@@ -249,7 +301,9 @@ padding:25px
 
 <section class="hero">
 
-<div class="logo">SSSkeratin</div>
+<div class="logo">
+SSSkeratin
+</div>
 
 <div class="hero-subtitle">
 Hair • Beauty • Care
@@ -263,56 +317,83 @@ Hair • Beauty • Care
 
 </section>
 
-
 <section class="card">
 
-<h2>Обо мне</h2>
+<h2>
+Обо мне
+</h2>
 
 <p class="small">
 Я внимательно отношусь к состоянию волос и подбираю
 процедуру индивидуально.
 </p>
 
-<a class="social"
+<a
+class="social"
 href="https://instagram.com/ssskeratin"
-target="_blank">
+target="_blank"
+rel="noopener"
+>
 
-<strong>Instagram · @ssskeratin</strong>
-<span>Мои работы и результаты процедур</span>
+<strong>
+Instagram · @ssskeratin
+</strong>
+
+<span>
+Мои работы и результаты процедур
+</span>
 
 </a>
 
-<a class="social"
+<a
+class="social"
 href="https://t.me/keratinirir"
-target="_blank">
+target="_blank"
+rel="noopener"
+>
 
-<strong>Telegram-канал · @keratinirir</strong>
-<span>Работы, информация и новости</span>
+<strong>
+Telegram-канал · @keratinirir
+</strong>
+
+<span>
+Работы, информация и новости
+</span>
 
 </a>
 
-<a class="social"
+<a
+class="social"
 href="https://t.me/SSSkeratin"
-target="_blank">
+target="_blank"
+rel="noopener"
+>
 
-<strong>Telegram для записи · @SSSkeratin</strong>
-<span>Записаться или задать вопрос</span>
+<strong>
+Telegram для записи · @SSSkeratin
+</strong>
+
+<span>
+Записаться или задать вопрос
+</span>
 
 </a>
 
 </section>
 
-
 <section class="card">
 
-<h2>Выберите место</h2>
+<h2>
+Выберите место
+</h2>
 
 <div class="city-buttons">
 
 <button
 id="moscow"
 class="city-button"
-onclick="chooseCity('Москва')">
+onclick="chooseCity('Москва')"
+>
 
 Москва
 
@@ -321,7 +402,8 @@ onclick="chooseCity('Москва')">
 <button
 id="chaplygin"
 class="city-button"
-onclick="chooseCity('Чаплыгин')">
+onclick="chooseCity('Чаплыгин')"
+>
 
 Чаплыгин
 
@@ -331,136 +413,277 @@ onclick="chooseCity('Чаплыгин')">
 
 </section>
 
-
 <section class="card">
 
-<h2>Процедуры</h2>
+<h2>
+Процедуры
+</h2>
 
 <div class="procedure">
 
-<h3>KERATIN</h3>
+<h3>
+KERATIN
+</h3>
 
-<div class="price-row"><span>20 см</span><span>3 000 ₽</span></div>
-<div class="price-row"><span>30 см</span><span>4 000 ₽</span></div>
-<div class="price-row"><span>40 см</span><span>5 000 ₽</span></div>
-<div class="price-row"><span>50 см</span><span>6 000 ₽</span></div>
-<div class="price-row"><span>60 см</span><span>7 000 ₽</span></div>
-<div class="price-row"><span>70 см</span><span>8 000 ₽</span></div>
-
+<div class="price-row">
+<span>20 см</span>
+<span>3 000 ₽</span>
 </div>
 
+<div class="price-row">
+<span>30 см</span>
+<span>4 000 ₽</span>
+</div>
+
+<div class="price-row">
+<span>40 см</span>
+<span>5 000 ₽</span>
+</div>
+
+<div class="price-row">
+<span>50 см</span>
+<span>6 000 ₽</span>
+</div>
+
+<div class="price-row">
+<span>60 см</span>
+<span>7 000 ₽</span>
+</div>
+
+<div class="price-row">
+<span>70 см</span>
+<span>8 000 ₽</span>
+</div>
+
+</div>
 
 <div class="procedure">
 
-<h3>NANOPLASTIKA</h3>
+<h3>
+NANOPLASTIKA
+</h3>
 
-<div class="price-row"><span>20 см</span><span>3 000 ₽</span></div>
-<div class="price-row"><span>30 см</span><span>5 000 ₽</span></div>
-<div class="price-row"><span>40 см</span><span>6 000 ₽</span></div>
-<div class="price-row"><span>50 см</span><span>7 000 ₽</span></div>
-<div class="price-row"><span>60 см</span><span>8 000 ₽</span></div>
-<div class="price-row"><span>70 см</span><span>9 000 ₽</span></div>
-
+<div class="price-row">
+<span>20 см</span>
+<span>3 000 ₽</span>
 </div>
 
+<div class="price-row">
+<span>30 см</span>
+<span>5 000 ₽</span>
+</div>
+
+<div class="price-row">
+<span>40 см</span>
+<span>6 000 ₽</span>
+</div>
+
+<div class="price-row">
+<span>50 см</span>
+<span>7 000 ₽</span>
+</div>
+
+<div class="price-row">
+<span>60 см</span>
+<span>8 000 ₽</span>
+</div>
+
+<div class="price-row">
+<span>70 см</span>
+<span>9 000 ₽</span>
+</div>
+
+</div>
 
 <div class="procedure">
 
-<h3>BOTOX IN HOT TECHNIQUE</h3>
+<h3>
+BOTOX IN HOT TECHNIQUE
+</h3>
 
-<div class="price-row"><span>20 см</span><span>2 500 ₽</span></div>
-<div class="price-row"><span>30 см</span><span>3 500 ₽</span></div>
-<div class="price-row"><span>40 см</span><span>4 500 ₽</span></div>
-<div class="price-row"><span>50 см</span><span>5 500 ₽</span></div>
-<div class="price-row"><span>60 см</span><span>6 500 ₽</span></div>
-<div class="price-row"><span>70 см</span><span>7 000 ₽</span></div>
-
+<div class="price-row">
+<span>20 см</span>
+<span>2 500 ₽</span>
 </div>
 
+<div class="price-row">
+<span>30 см</span>
+<span>3 500 ₽</span>
+</div>
+
+<div class="price-row">
+<span>40 см</span>
+<span>4 500 ₽</span>
+</div>
+
+<div class="price-row">
+<span>50 см</span>
+<span>5 500 ₽</span>
+</div>
+
+<div class="price-row">
+<span>60 см</span>
+<span>6 500 ₽</span>
+</div>
+
+<div class="price-row">
+<span>70 см</span>
+<span>7 000 ₽</span>
+</div>
+
+</div>
 
 <div class="ends">
 
-<h3>SEALING ENDS</h3>
+<h3>
+SEALING ENDS
+</h3>
 
-<strong>2 500 ₽</strong>
+<strong>
+2 500 ₽
+</strong>
 
 <p class="small">
-Процедура для тех, кто хочет отрастить волосы и сохранить длину.
-Помогает защитить кончики, уменьшить их сечение и сохранить ухоженный вид.
-Можно совмещать с другими процедурами для более комплексного ухода.
+
+Процедура для тех, кто хочет отрастить волосы
+и сохранить длину.
+
+Помогает защитить кончики, уменьшить их сечение
+и сохранить ухоженный вид.
+
+Можно совмещать с другими процедурами
+для более комплексного ухода.
+
 </p>
 
 </div>
 
-
 <div class="notice">
 
-<div>Волосы длиннее 70 см — индивидуальный расчёт.</div>
-<div>Густота более 8 см — доплата 1 000–2 500 ₽.</div>
-<div>Первое посещение — скидка 15%.</div>
-<div>Отметка в Stories — скидка 10% на следующее посещение.</div>
+<div>
+Волосы длиннее 70 см — индивидуальный расчёт.
+</div>
+
+<div>
+Густота более 8 см — доплата 1 000–2 500 ₽.
+</div>
+
+<div>
+Первое посещение — скидка 15%.
+</div>
+
+<div>
+Отметка в Stories — скидка 10% на следующее посещение.
+</div>
 
 </div>
 
 </section>
-
 
 <section class="card">
 
-<h2>Свободные окошки</h2>
+<h2>
+Свободные окошки
+</h2>
 
-<div id="selectedCity" class="small">
+<div
+id="selectedCity"
+class="small"
+>
 Сначала выберите город.
 </div>
 
-<div id="slots"></div>
+<div id="slots">
+</div>
 
 </section>
 
+<section
+class="card hidden"
+id="formCard"
+>
 
-<section class="card hidden" id="formCard">
+<h2>
+Запись
+</h2>
 
-<h2>Запись</h2>
+<div
+class="selected-info"
+id="selectedInfo"
+>
+</div>
 
-<div class="selected-info" id="selectedInfo"></div>
-
-<label>Имя</label>
+<label>
+Имя
+</label>
 
 <input
 id="name"
-placeholder="Ваше имя">
+placeholder="Ваше имя"
+autocomplete="name"
+>
 
-
-<label>Telegram или номер телефона</label>
+<label>
+Telegram или номер телефона
+</label>
 
 <input
 id="contact"
-placeholder="@username или номер телефона">
+placeholder="@username или номер телефона"
+autocomplete="tel"
+>
 
+<label>
+Процедура
+</label>
 
-<label>Процедура</label>
-
-<select id="procedureSelect">
+<select
+id="procedureSelect"
+>
 
 <option value="">
 Выберите процедуру
 </option>
 
-<option>KERATIN</option>
-<option>NANOPLASTIKA</option>
-<option>BOTOX IN HOT TECHNIQUE</option>
-<option>SEALING ENDS</option>
-<option>KERATIN + SEALING ENDS</option>
-<option>NANOPLASTIKA + SEALING ENDS</option>
-<option>BOTOX IN HOT TECHNIQUE + SEALING ENDS</option>
-<option>НЕ ЗНАЮ, КАКАЯ ПРОЦЕДУРА МНЕ ПОДОЙДЁТ</option>
+<option>
+KERATIN
+</option>
+
+<option>
+NANOPLASTIKA
+</option>
+
+<option>
+BOTOX IN HOT TECHNIQUE
+</option>
+
+<option>
+SEALING ENDS
+</option>
+
+<option>
+KERATIN + SEALING ENDS
+</option>
+
+<option>
+NANOPLASTIKA + SEALING ENDS
+</option>
+
+<option>
+BOTOX IN HOT TECHNIQUE + SEALING ENDS
+</option>
+
+<option>
+НЕ ЗНАЮ, КАКАЯ ПРОЦЕДУРА МНЕ ПОДОЙДЁТ
+</option>
 
 </select>
 
-
 <div class="photo-box">
 
-<strong>Фото волос *</strong>
+<strong>
+Фото волос *
+</strong>
 
 <div class="small">
 
@@ -472,34 +695,39 @@ placeholder="@username или номер телефона">
 <input
 type="file"
 id="photo"
-accept="image/*"
+accept="image/jpeg,image/png,image/webp"
 capture="environment"
-onchange="previewPhoto()">
+onchange="previewPhoto()"
+>
 
 <img
 id="photoPreview"
-class="photo-preview">
+class="photo-preview"
+alt="Предпросмотр фото"
+>
 
 </div>
 
-
-<label>Комментарий</label>
+<label>
+Комментарий
+</label>
 
 <textarea
 id="comment"
-placeholder="Расскажите о волосах или задайте вопрос">
-</textarea>
-
+placeholder="Расскажите о волосах или задайте вопрос"
+></textarea>
 
 <div
 class="terms"
-id="cityTerms">
+id="cityTerms"
+>
 </div>
 
-
 <button
+id="sendButton"
 style="margin-top:18px"
-onclick="sendBooking()">
+onclick="sendBooking()"
+>
 
 Отправить запись
 
@@ -507,10 +735,10 @@ onclick="sendBooking()">
 
 </section>
 
-
 <section
 class="card hidden"
-id="sentCard">
+id="sentCard"
+>
 
 <h2>
 Спасибо за выбор SSSkeratin 🤍
@@ -532,13 +760,11 @@ id="sentCard">
 
 </section>
 
-
 <div class="footer">
 SSSkeratin
 </div>
 
 </div>
-
 
 <script>
 
@@ -556,47 +782,51 @@ let selectedDate = "";
 
 function chooseCity(value){
 
-city = value;
+  city = value;
 
-selectedSlot = "";
-selectedDate = "";
+  selectedSlot = "";
+  selectedDate = "";
 
-document
-.getElementById("moscow")
-.classList.remove("active");
+  document
+    .getElementById("moscow")
+    .classList.remove("active");
 
-document
-.getElementById("chaplygin")
-.classList.remove("active");
+  document
+    .getElementById("chaplygin")
+    .classList.remove("active");
 
-if(value === "Москва"){
+  if(value === "Москва"){
 
-document
-.getElementById("moscow")
-.classList.add("active");
+    document
+      .getElementById("moscow")
+      .classList.add("active");
 
-}
+  }
 
-if(value === "Чаплыгин"){
+  if(value === "Чаплыгин"){
 
-document
-.getElementById("chaplygin")
-.classList.add("active");
+    document
+      .getElementById("chaplygin")
+      .classList.add("active");
 
-}
+  }
 
-document
-.getElementById("selectedCity")
-.innerText =
-"Свободные окошки — " + value;
+  document
+    .getElementById("selectedCity")
+    .innerText =
+    "Свободные окошки — " + value;
 
-document
-.getElementById("formCard")
-.classList.add("hidden");
+  document
+    .getElementById("formCard")
+    .classList.add("hidden");
 
-updateCityTerms();
+  document
+    .getElementById("sentCard")
+    .classList.add("hidden");
 
-loadSlots();
+  updateCityTerms();
+
+  loadSlots();
 
 }
 
@@ -607,65 +837,18 @@ loadSlots();
 
 function updateCityTerms(){
 
-const terms =
-document.getElementById("cityTerms");
+  const terms =
+    document.getElementById(
+      "cityTerms"
+    );
 
-if(city === "Москва"){
+  if(city === "Москва"){
 
-terms.innerHTML = `
+    terms.innerHTML = `
 
-<strong>Предоплата — 1 000 ₽</strong>
-
-<br><br>
-
-Предоплата входит в стоимость процедуры.
-
-<br><br>
-
-При отмене записи за 72 часа и более
-до процедуры предоплата возвращается.
-
-При отмене менее чем за 72 часа
-предоплата не возвращается.
-
-<br><br>
-
-Если отмена связана с действительно серьёзной
-непредвиденной ситуацией — например,
-внезапным заболеванием, травмой, ДТП,
-госпитализацией, смертью близкого человека
-или другой чрезвычайной ситуацией —
-необходимо написать об этом в личный чат:
-
-<br><br>
-
-<a href="https://t.me/SSSkeratin"
-target="_blank"
-style="color:#292522;font-weight:600">
-
-Написать мастеру в Telegram →
-
-</a>
-
-<br><br>
-
-и предоставить подтверждение ситуации:
-документы, фото, видео или другие материалы.
-
-<br><br>
-
-Возврат в таком случае рассматривается
-после проверки предоставленной информации.
-
-`;
-
-}
-
-if(city === "Чаплыгин"){
-
-terms.innerHTML = `
-
-<strong>Предоплата — 500 ₽</strong>
+<strong>
+Предоплата — 1 000 ₽
+</strong>
 
 <br><br>
 
@@ -690,9 +873,12 @@ terms.innerHTML = `
 
 <br><br>
 
-<a href="https://t.me/SSSkeratin"
+<a
+href="https://t.me/SSSkeratin"
 target="_blank"
-style="color:#292522;font-weight:600">
+rel="noopener"
+style="color:#292522;font-weight:600"
+>
 
 Написать мастеру в Telegram →
 
@@ -710,7 +896,69 @@ style="color:#292522;font-weight:600">
 
 `;
 
-}
+    return;
+
+  }
+
+  if(city === "Чаплыгин"){
+
+    terms.innerHTML = `
+
+<strong>
+Предоплата — 500 ₽
+</strong>
+
+<br><br>
+
+Предоплата входит в стоимость процедуры.
+
+<br><br>
+
+При отмене записи за 72 часа и более
+до процедуры предоплата возвращается.
+
+При отмене менее чем за 72 часа
+предоплата не возвращается.
+
+<br><br>
+
+Если отмена связана с действительно серьёзной
+непредвиденной ситуацией — например,
+внезапным заболеванием, травмой, ДТП,
+госпитализацией, смертью близкого человека
+или другой чрезвычайной ситуацией —
+необходимо написать об этом в личный чат:
+
+<br><br>
+
+<a
+href="https://t.me/SSSkeratin"
+target="_blank"
+rel="noopener"
+style="color:#292522;font-weight:600"
+>
+
+Написать мастеру в Telegram →
+
+</a>
+
+<br><br>
+
+и предоставить подтверждение ситуации:
+документы, фото, видео или другие материалы.
+
+<br><br>
+
+Возврат в таком случае рассматривается
+после проверки предоставленной информации.
+
+`;
+
+    return;
+
+  }
+
+  terms.innerHTML = "";
 
 }
 
@@ -721,154 +969,163 @@ style="color:#292522;font-weight:600">
 
 async function loadSlots(){
 
-const container =
-document.getElementById("slots");
+  const container =
+    document.getElementById(
+      "slots"
+    );
 
-if(!city){
+  if(!city){
 
-container.innerHTML =
-'<div class="notice">Сначала выберите город.</div>';
+    container.innerHTML =
+      '<div class="notice">Сначала выберите город.</div>';
 
-return;
+    return;
 
-}
+  }
 
-container.innerHTML =
-'<div class="small">Загружаем свободные окошки...</div>';
+  container.innerHTML =
+    '<div class="loading">Загружаем свободные окошки...</div>';
 
-try{
+  try{
 
-const response =
-await fetch(
-API +
-"/slots?city=" +
-encodeURIComponent(city)
-);
+    const response =
+      await fetch(
+        API +
+        "/slots?city=" +
+        encodeURIComponent(city)
+      );
 
-const data =
-await response.json();
+    if(!response.ok){
 
-container.innerHTML = "";
+      throw new Error(
+        "HTTP " +
+        response.status
+      );
 
-let cityData = data.slots || [];
+    }
 
-if(
-!Array.isArray(cityData)
-){
+    const data =
+      await response.json();
 
-cityData = [];
+    container.innerHTML = "";
 
-}
+    let cityData =
+      Array.isArray(data.slots)
+        ? data.slots
+        : [];
 
-if(
-cityData.length === 0
-){
+    cityData =
+      cityData.filter(
+        item =>
+          normalizeCity(
+            item.city ||
+            city
+          ) === city
+      );
 
-const allResponse =
-await fetch(
-API + "/all-slots"
-);
+    cityData.sort(
+      (a,b) =>
+        String(a.date)
+          .localeCompare(
+            String(b.date)
+          )
+    );
 
-const allData =
-await allResponse.json();
+    if(
+      cityData.length === 0
+    ){
 
-cityData =
-(allData.slots || [])
-.filter(item =>
-normalizeCity(item.city) === city
-);
+      container.innerHTML =
+        '<div class="notice">На данный момент свободных окошек нет.</div>';
 
-}
+      return;
 
-cityData =
-cityData.filter(item =>
-normalizeCity(item.city) === city
-);
+    }
 
-cityData.sort(
-(a,b) =>
-String(a.date)
-.localeCompare(
-String(b.date)
-)
-);
+    cityData.forEach(
+      day => {
 
+        if(
+          !day.slots ||
+          !day.slots.length
+        ){
 
-if(cityData.length === 0){
+          return;
 
-container.innerHTML =
-'<div class="notice">На данный момент свободных окошек нет.</div>';
+        }
 
-return;
+        const title =
+          document.createElement(
+            "div"
+          );
 
-}
+        title.className =
+          "slot-date";
 
+        title.innerText =
+          formatDate(
+            day.date
+          );
 
-cityData.forEach(day => {
+        container.appendChild(
+          title
+        );
 
-if(
-!day.slots ||
-!day.slots.length
-){
-return;
-}
+        day.slots
+          .slice()
+          .sort(
+            (a,b) =>
+              String(a.time)
+                .localeCompare(
+                  String(b.time)
+                )
+          )
+          .forEach(
+            item => {
 
-const title =
-document.createElement("div");
+              const slot =
+                document.createElement(
+                  "div"
+                );
 
-title.className =
-"slot-date";
+              slot.className =
+                "slot";
 
-title.innerText =
-formatDate(day.date);
+              slot.innerText =
+                item.time;
 
-container.appendChild(title);
+              slot.onclick =
+                function(){
 
+                  selectSlot(
+                    day.date,
+                    item.time,
+                    slot
+                  );
 
-day.slots
-.sort(
-(a,b) =>
-String(a.time)
-.localeCompare(
-String(b.time)
-)
-)
-.forEach(item => {
+                };
 
-const slot =
-document.createElement("div");
+              container.appendChild(
+                slot
+              );
 
-slot.className =
-"slot";
+            }
+          );
 
-slot.innerText =
-item.time;
+      }
+    );
 
-slot.onclick =
-function(){
+  }catch(error){
 
-selectSlot(
-day.date,
-item.time,
-slot
-);
+    console.error(
+      "Slots error:",
+      error
+    );
 
-};
+    container.innerHTML =
+      '<div class="notice">Не удалось загрузить окошки. Попробуйте обновить страницу.</div>';
 
-container.appendChild(slot);
-
-});
-
-});
-
-}catch(error){
-
-console.error(error);
-
-container.innerHTML =
-'<div class="notice">Не удалось загрузить окошки.</div>';
-
-}
+  }
 
 }
 
@@ -879,30 +1136,32 @@ container.innerHTML =
 
 function normalizeCity(value){
 
-const text =
-String(value || "");
+  const text =
+    String(
+      value || ""
+    );
 
-if(
-text === "Москва" ||
-text.includes("РњРѕСЃРєРІР°") ||
-text.toLowerCase().includes("моск")
-){
+  if(
+    text === "Москва" ||
+    text.includes("РњРѕСЃРєРІР°") ||
+    text.toLowerCase().includes("моск")
+  ){
 
-return "Москва";
+    return "Москва";
 
-}
+  }
 
-if(
-text === "Чаплыгин" ||
-text.includes("Р§Р°РїР»С‹РіРёРЅ") ||
-text.toLowerCase().includes("чап")
-){
+  if(
+    text === "Чаплыгин" ||
+    text.includes("Р§Р°РїР»С‹РіРёРЅ") ||
+    text.toLowerCase().includes("чап")
+  ){
 
-return "Чаплыгин";
+    return "Чаплыгин";
 
-}
+  }
 
-return text;
+  return text;
 
 }
 
@@ -912,41 +1171,67 @@ return text;
 ========================= */
 
 function selectSlot(
-date,
-time,
-element
+  date,
+  time,
+  element
 ){
 
-document
-.querySelectorAll(".slot")
-.forEach(x =>
-x.classList.remove("active")
-);
+  document
+    .querySelectorAll(
+      ".slot"
+    )
+    .forEach(
+      x =>
+        x.classList.remove(
+          "active"
+        )
+    );
 
-element.classList.add("active");
+  element.classList.add(
+    "active"
+  );
 
-selectedDate = date;
-selectedSlot = time;
+  selectedDate =
+    date;
 
-document
-.getElementById("selectedInfo")
-.innerText =
-city +
-" · " +
-formatDate(date) +
-" · " +
-time;
+  selectedSlot =
+    time;
 
-document
-.getElementById("formCard")
-.classList.remove("hidden");
+  document
+    .getElementById(
+      "selectedInfo"
+    )
+    .innerText =
+    city +
+    " · " +
+    formatDate(date) +
+    " · " +
+    time;
 
-document
-.getElementById("formCard")
-.scrollIntoView({
-behavior:"smooth",
-block:"center"
-});
+  document
+    .getElementById(
+      "formCard"
+    )
+    .classList.remove(
+      "hidden"
+    );
+
+  document
+    .getElementById(
+      "sentCard"
+    )
+    .classList.add(
+      "hidden"
+    );
+
+  document
+    .getElementById(
+      "formCard"
+    )
+    .scrollIntoView({
+      behavior:"smooth",
+      block:"center"
+    });
 
 }
 
@@ -957,60 +1242,229 @@ block:"center"
 
 function previewPhoto(){
 
-const input =
-document.getElementById("photo");
+  const input =
+    document.getElementById(
+      "photo"
+    );
 
-const preview =
-document.getElementById("photoPreview");
+  const preview =
+    document.getElementById(
+      "photoPreview"
+    );
 
-if(
-!input.files ||
-!input.files.length
-){
+  if(
+    !input.files ||
+    !input.files.length
+  ){
 
-preview.style.display =
-"none";
+    preview.style.display =
+      "none";
 
-return;
+    preview.src = "";
+
+    return;
+
+  }
+
+  const file =
+    input.files[0];
+
+  if(
+    file.size >
+    7 * 1024 * 1024
+  ){
+
+    alert(
+      "Фото должно быть не больше 7 МБ."
+    );
+
+    input.value = "";
+
+    preview.style.display =
+      "none";
+
+    return;
+
+  }
+
+  const reader =
+    new FileReader();
+
+  reader.onload =
+    function(e){
+
+      preview.src =
+        e.target.result;
+
+      preview.style.display =
+        "block";
+
+    };
+
+  reader.readAsDataURL(
+    file
+  );
 
 }
 
-const file =
-input.files[0];
 
-if(
-file.size >
-7 * 1024 * 1024
-){
+/* =========================
+СЖАТИЕ ФОТО
+========================= */
 
-alert(
-"Фото должно быть не больше 7 МБ."
-);
+function compressImage(file){
 
-input.value = "";
+  return new Promise(
+    (resolve,reject)=>{
 
-preview.style.display =
-"none";
+      const reader =
+        new FileReader();
 
-return;
+      reader.onload =
+        function(){
 
-}
+          const img =
+            new Image();
 
-const reader =
-new FileReader();
+          img.onload =
+            function(){
 
-reader.onload =
-function(e){
+              const maxSize =
+                1600;
 
-preview.src =
-e.target.result;
+              let width =
+                img.width;
 
-preview.style.display =
-"block";
+              let height =
+                img.height;
 
-};
+              if(
+                width > maxSize ||
+                height > maxSize
+              ){
 
-reader.readAsDataURL(file);
+                if(
+                  width > height
+                ){
+
+                  height =
+                    Math.round(
+                      height *
+                      maxSize /
+                      width
+                    );
+
+                  width =
+                    maxSize;
+
+                }else{
+
+                  width =
+                    Math.round(
+                      width *
+                      maxSize /
+                      height
+                    );
+
+                  height =
+                    maxSize;
+
+                }
+
+              }
+
+              const canvas =
+                document.createElement(
+                  "canvas"
+                );
+
+              canvas.width =
+                width;
+
+              canvas.height =
+                height;
+
+              const ctx =
+                canvas.getContext(
+                  "2d"
+                );
+
+              ctx.drawImage(
+                img,
+                0,
+                0,
+                width,
+                height
+              );
+
+              canvas.toBlob(
+                blob => {
+
+                  if(!blob){
+
+                    reject(
+                      new Error(
+                        "Не удалось сжать фото."
+                      )
+                    );
+
+                    return;
+
+                  }
+
+                  const reader2 =
+                    new FileReader();
+
+                  reader2.onload =
+                    function(){
+
+                      const result =
+                        reader2.result;
+
+                      const base64 =
+                        result.split(
+                          ","
+                        )[1];
+
+                      resolve({
+                        data:base64,
+                        type:"image/jpeg",
+                        name:"hair-photo.jpg"
+                      });
+
+                    };
+
+                  reader2.onerror =
+                    reject;
+
+                  reader2.readAsDataURL(
+                    blob
+                  );
+
+                },
+                "image/jpeg",
+                0.78
+              );
+
+            };
+
+          img.onerror =
+            reject;
+
+          img.src =
+            reader.result;
+
+        };
+
+      reader.onerror =
+        reject;
+
+      reader.readAsDataURL(
+        file
+      );
+
+    }
+  );
 
 }
 
@@ -1021,212 +1475,231 @@ reader.readAsDataURL(file);
 
 async function sendBooking(){
 
-const name =
-document
-.getElementById("name")
-.value
-.trim();
+  const button =
+    document.getElementById(
+      "sendButton"
+    );
 
-const contact =
-document
-.getElementById("contact")
-.value
-.trim();
+  const name =
+    document
+      .getElementById(
+        "name"
+      )
+      .value
+      .trim();
 
-const procedure =
-document
-.getElementById("procedureSelect")
-.value;
+  const contact =
+    document
+      .getElementById(
+        "contact"
+      )
+      .value
+      .trim();
 
-const comment =
-document
-.getElementById("comment")
-.value
-.trim();
+  const procedure =
+    document
+      .getElementById(
+        "procedureSelect"
+      )
+      .value;
 
-const photoInput =
-document
-.getElementById("photo");
+  const comment =
+    document
+      .getElementById(
+        "comment"
+      )
+      .value
+      .trim();
 
+  const photoInput =
+    document.getElementById(
+      "photo"
+    );
 
-if(
-!city ||
-!selectedDate ||
-!selectedSlot ||
-!name ||
-!contact ||
-!procedure
-){
 
-alert(
-"Заполните все обязательные поля."
-);
+  if(
+    !city ||
+    !selectedDate ||
+    !selectedSlot ||
+    !name ||
+    !contact ||
+    !procedure
+  ){
 
-return;
+    alert(
+      "Заполните все обязательные поля."
+    );
 
-}
+    return;
 
+  }
 
-if(
-!photoInput.files ||
-!photoInput.files.length
-){
 
-alert(
-"Без фотографии волос запись невозможна. Прикрепите фото."
-);
+  if(
+    !photoInput.files ||
+    !photoInput.files.length
+  ){
 
-photoInput.scrollIntoView({
-behavior:"smooth",
-block:"center"
-});
+    alert(
+      "Без фотографии волос запись невозможна. Прикрепите фото."
+    );
 
-return;
+    photoInput.scrollIntoView({
+      behavior:"smooth",
+      block:"center"
+    });
 
-}
+    return;
 
+  }
 
-const file =
-photoInput.files[0];
 
-if(
-file.size >
-7 * 1024 * 1024
-){
+  const file =
+    photoInput.files[0];
 
-alert(
-"Фото должно быть не больше 7 МБ."
-);
 
-return;
+  if(
+    file.size >
+    7 * 1024 * 1024
+  ){
 
-}
+    alert(
+      "Фото должно быть не больше 7 МБ."
+    );
 
+    return;
 
-const photoData =
-await fileToBase64(file);
+  }
 
 
-const body = {
+  button.disabled =
+    true;
 
-city:city,
+  button.innerText =
+    "Отправляем...";
 
-date:selectedDate,
 
-time:selectedSlot,
+  try{
 
-name:name,
+    const photo =
+      await compressImage(
+        file
+      );
 
-contact:contact,
+    const body = {
 
-procedure:procedure,
+      city:
+        city,
 
-comment:comment,
+      date:
+        selectedDate,
 
-photo:{
-name:file.name,
-type:file.type,
-data:photoData
-}
+      time:
+        selectedSlot,
 
-};
+      name:
+        name,
 
+      contact:
+        contact,
 
-try{
+      procedure:
+        procedure,
 
-const response =
-await fetch(
-API + "/book",
-{
-method:"POST",
+      comment:
+        comment,
 
-headers:{
-"Content-Type":"application/json"
-},
+      photo:
+        photo
 
-body:
-JSON.stringify(body)
+    };
 
-}
-);
 
+    const response =
+      await fetch(
+        API + "/book",
+        {
+          method:"POST",
 
-const result =
-await response.json();
+          headers:{
+            "Content-Type":
+              "application/json"
+          },
 
+          body:
+            JSON.stringify(
+              body
+            )
 
-if(!result.ok){
+        }
+      );
 
-alert(
-result.error ||
-"Не удалось отправить запись."
-);
 
-return;
+    const result =
+      await response.json();
 
-}
 
+    if(!result.ok){
 
-document
-.getElementById("formCard")
-.classList.add("hidden");
+      alert(
+        result.error ||
+        "Не удалось отправить запись."
+      );
 
-document
-.getElementById("sentCard")
-.classList.remove("hidden");
+      button.disabled =
+        false;
 
-document
-.getElementById("sentCard")
-.scrollIntoView({
-behavior:"smooth"
-});
+      button.innerText =
+        "Отправить запись";
 
+      return;
 
-}catch(error){
+    }
 
-console.error(error);
 
-alert(
-"Не удалось отправить запись. Попробуйте ещё раз."
-);
+    document
+      .getElementById(
+        "formCard"
+      )
+      .classList.add(
+        "hidden"
+      );
 
-}
+    document
+      .getElementById(
+        "sentCard"
+      )
+      .classList.remove(
+        "hidden"
+      );
 
-}
+    document
+      .getElementById(
+        "sentCard"
+      )
+      .scrollIntoView({
+        behavior:"smooth"
+      });
 
 
-/* =========================
-BASE64
-========================= */
+  }catch(error){
 
-function fileToBase64(file){
+    console.error(
+      "Booking error:",
+      error
+    );
 
-return new Promise(
-(resolve,reject)=>{
+    alert(
+      "Не удалось отправить запись. Проверьте интернет и попробуйте ещё раз."
+    );
 
-const reader =
-new FileReader();
+    button.disabled =
+      false;
 
-reader.onload =
-function(){
+    button.innerText =
+      "Отправить запись";
 
-const result =
-reader.result;
-
-const base64 =
-result.split(",")[1];
-
-resolve(base64);
-
-};
-
-reader.onerror =
-reject;
-
-reader.readAsDataURL(file);
-
-}
-);
+  }
 
 }
 
@@ -1235,25 +1708,29 @@ reader.readAsDataURL(file);
 ДАТА
 ========================= */
 
-function formatDate(date){
+function formatDate(
+  date
+){
 
-const d =
-new Date(
-date + "T12:00:00"
-);
+  const d =
+    new Date(
+      date +
+      "T12:00:00"
+    );
 
-return d.toLocaleDateString(
-"ru-RU",
-{
-day:"numeric",
-month:"long",
-year:"numeric"
-}
-);
+  return d.toLocaleDateString(
+    "ru-RU",
+    {
+      day:"numeric",
+      month:"long",
+      year:"numeric"
+    }
+  );
 
 }
 
 </script>
 
 </body>
+
 </html>
